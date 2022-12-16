@@ -14,14 +14,36 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>Holder for reflection information generated from unittest_proto3.proto</summary>
   public static partial class UnittestProto3Reflection {
 
-    #region Descriptor
-    /// <summary>File descriptor for unittest_proto3.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
+    internal const string ConstProtocVersion = "3.21.9";
+    /// <summary>Version of protoc used to generate this code.</summary>
+    public static global::System.Version ProtocVersion {
+      get { return protocVersion; }
     }
-    private static pbr::FileDescriptor descriptor;
+    private static readonly global::System.Version protocVersion = new global::System.Version(ConstProtocVersion);
+
+    /// <summary>Minimum version of Google.Protobuf which is compatible with this generated code.</summary>
+    public static global::System.Version MinimumRuntimeVersion {
+      get { return minimumRuntimeVersion; }
+    }
+    private static readonly global::System.Version minimumRuntimeVersion = new global::System.Version(3, 21, 9);
 
     static UnittestProto3Reflection() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
+    }
+
+    internal static bool ValidateRuntimeVersion() {
+      return true;
+    }
+
+    #region Descriptor
+    private static readonly global::System.Lazy<pbr::FileDescriptor> descriptor = new global::System.Lazy<pbr::FileDescriptor>(CreateFileDescriptor);
+    /// <summary>File descriptor for unittest_proto3.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor.Value; }
+    }
+
+    private static pbr::FileDescriptor CreateFileDescriptor() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChV1bml0dGVzdF9wcm90bzMucHJvdG8SEnByb3RvYnVmX3VuaXR0ZXN0Mxoc",
@@ -156,7 +178,7 @@ namespace Google.Protobuf.TestProtos {
             "ZXNwb25zZRJGCgNCYXISHi5wcm90b2J1Zl91bml0dGVzdDMuQmFyUmVxdWVz",
             "dBofLnByb3RvYnVmX3VuaXR0ZXN0My5CYXJSZXNwb25zZUIsQg1Vbml0dGVz",
             "dFByb3RvqgIaR29vZ2xlLlByb3RvYnVmLlRlc3RQcm90b3NiBnByb3RvMw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+      return pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.TestProtos.UnittestImportProto3Reflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.TestProtos.ForeignEnum), typeof(global::Google.Protobuf.TestProtos.TestEnumWithDupValue), typeof(global::Google.Protobuf.TestProtos.TestSparseEnum), typeof(global::Google.Protobuf.TestProtos.CommentEnum), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes), global::Google.Protobuf.TestProtos.TestAllTypes.Parser, new[]{ "SingleInt32", "SingleInt64", "SingleUint32", "SingleUint64", "SingleSint32", "SingleSint64", "SingleFixed32", "SingleFixed64", "SingleSfixed32", "SingleSfixed64", "SingleFloat", "SingleDouble", "SingleBool", "SingleString", "SingleBytes", "SingleNestedMessage", "SingleForeignMessage", "SingleImportMessage", "SingleNestedEnum", "SingleForeignEnum", "SingleImportEnum", "SinglePublicImportMessage", "RepeatedInt32", "RepeatedInt64", "RepeatedUint32", "RepeatedUint64", "RepeatedSint32", "RepeatedSint64", "RepeatedFixed32", "RepeatedFixed64", "RepeatedSfixed32", "RepeatedSfixed64", "RepeatedFloat", "RepeatedDouble", "RepeatedBool", "RepeatedString", "RepeatedBytes", "RepeatedNestedMessage", "RepeatedForeignMessage", "RepeatedImportMessage", "RepeatedNestedEnum", "RepeatedForeignEnum", "RepeatedImportEnum", "RepeatedPublicImportMessage", "OneofUint32", "OneofNestedMessage", "OneofString", "OneofBytes" }, new[]{ "OneofField" }, new[]{ typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage), global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser, new[]{ "Bb" }, null, null, null, null)}),
@@ -259,34 +281,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestAllTypes> _parser = new pb::MessageParser<TestAllTypes>(() => new TestAllTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestAllTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestAllTypes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestAllTypes(TestAllTypes other) : this() {
       singleInt32_ = other.singleInt32_;
       singleInt64_ = other.singleInt64_;
@@ -351,7 +376,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestAllTypes Clone() {
       return new TestAllTypes(this);
     }
@@ -363,7 +388,7 @@ namespace Google.Protobuf.TestProtos {
     /// Singular
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int SingleInt32 {
       get { return singleInt32_; }
       set {
@@ -375,7 +400,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleInt64FieldNumber = 2;
     private long singleInt64_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public long SingleInt64 {
       get { return singleInt64_; }
       set {
@@ -387,7 +412,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleUint32FieldNumber = 3;
     private uint singleUint32_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public uint SingleUint32 {
       get { return singleUint32_; }
       set {
@@ -399,7 +424,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleUint64FieldNumber = 4;
     private ulong singleUint64_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ulong SingleUint64 {
       get { return singleUint64_; }
       set {
@@ -411,7 +436,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleSint32FieldNumber = 5;
     private int singleSint32_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int SingleSint32 {
       get { return singleSint32_; }
       set {
@@ -423,7 +448,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleSint64FieldNumber = 6;
     private long singleSint64_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public long SingleSint64 {
       get { return singleSint64_; }
       set {
@@ -435,7 +460,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleFixed32FieldNumber = 7;
     private uint singleFixed32_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public uint SingleFixed32 {
       get { return singleFixed32_; }
       set {
@@ -447,7 +472,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleFixed64FieldNumber = 8;
     private ulong singleFixed64_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ulong SingleFixed64 {
       get { return singleFixed64_; }
       set {
@@ -459,7 +484,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleSfixed32FieldNumber = 9;
     private int singleSfixed32_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int SingleSfixed32 {
       get { return singleSfixed32_; }
       set {
@@ -471,7 +496,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleSfixed64FieldNumber = 10;
     private long singleSfixed64_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public long SingleSfixed64 {
       get { return singleSfixed64_; }
       set {
@@ -483,7 +508,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleFloatFieldNumber = 11;
     private float singleFloat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public float SingleFloat {
       get { return singleFloat_; }
       set {
@@ -495,7 +520,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleDoubleFieldNumber = 12;
     private double singleDouble_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public double SingleDouble {
       get { return singleDouble_; }
       set {
@@ -507,7 +532,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleBoolFieldNumber = 13;
     private bool singleBool_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool SingleBool {
       get { return singleBool_; }
       set {
@@ -519,7 +544,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleStringFieldNumber = 14;
     private string singleString_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string SingleString {
       get { return singleString_; }
       set {
@@ -531,7 +556,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleBytesFieldNumber = 15;
     private pb::ByteString singleBytes_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pb::ByteString SingleBytes {
       get { return singleBytes_; }
       set {
@@ -543,7 +568,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleNestedMessageFieldNumber = 18;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage singleNestedMessage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage SingleNestedMessage {
       get { return singleNestedMessage_; }
       set {
@@ -555,7 +580,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleForeignMessageFieldNumber = 19;
     private global::Google.Protobuf.TestProtos.ForeignMessage singleForeignMessage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ForeignMessage SingleForeignMessage {
       get { return singleForeignMessage_; }
       set {
@@ -567,7 +592,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleImportMessageFieldNumber = 20;
     private global::Google.Protobuf.TestProtos.ImportMessage singleImportMessage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ImportMessage SingleImportMessage {
       get { return singleImportMessage_; }
       set {
@@ -579,7 +604,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleNestedEnumFieldNumber = 21;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum singleNestedEnum_ = global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum SingleNestedEnum {
       get { return singleNestedEnum_; }
       set {
@@ -591,7 +616,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleForeignEnumFieldNumber = 22;
     private global::Google.Protobuf.TestProtos.ForeignEnum singleForeignEnum_ = global::Google.Protobuf.TestProtos.ForeignEnum.ForeignUnspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ForeignEnum SingleForeignEnum {
       get { return singleForeignEnum_; }
       set {
@@ -603,7 +628,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleImportEnumFieldNumber = 23;
     private global::Google.Protobuf.TestProtos.ImportEnum singleImportEnum_ = global::Google.Protobuf.TestProtos.ImportEnum.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ImportEnum SingleImportEnum {
       get { return singleImportEnum_; }
       set {
@@ -618,7 +643,7 @@ namespace Google.Protobuf.TestProtos {
     /// Defined in unittest_import_public.proto
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.PublicImportMessage SinglePublicImportMessage {
       get { return singlePublicImportMessage_; }
       set {
@@ -635,7 +660,7 @@ namespace Google.Protobuf.TestProtos {
     /// Repeated
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> RepeatedInt32 {
       get { return repeatedInt32_; }
     }
@@ -646,7 +671,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt64(258);
     private readonly pbc::RepeatedField<long> repeatedInt64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> RepeatedInt64 {
       get { return repeatedInt64_; }
     }
@@ -657,7 +682,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt32(266);
     private readonly pbc::RepeatedField<uint> repeatedUint32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> RepeatedUint32 {
       get { return repeatedUint32_; }
     }
@@ -668,7 +693,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt64(274);
     private readonly pbc::RepeatedField<ulong> repeatedUint64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> RepeatedUint64 {
       get { return repeatedUint64_; }
     }
@@ -679,7 +704,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt32(282);
     private readonly pbc::RepeatedField<int> repeatedSint32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> RepeatedSint32 {
       get { return repeatedSint32_; }
     }
@@ -690,7 +715,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt64(290);
     private readonly pbc::RepeatedField<long> repeatedSint64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> RepeatedSint64 {
       get { return repeatedSint64_; }
     }
@@ -701,7 +726,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed32(298);
     private readonly pbc::RepeatedField<uint> repeatedFixed32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> RepeatedFixed32 {
       get { return repeatedFixed32_; }
     }
@@ -712,7 +737,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed64(306);
     private readonly pbc::RepeatedField<ulong> repeatedFixed64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> RepeatedFixed64 {
       get { return repeatedFixed64_; }
     }
@@ -723,7 +748,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed32(314);
     private readonly pbc::RepeatedField<int> repeatedSfixed32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> RepeatedSfixed32 {
       get { return repeatedSfixed32_; }
     }
@@ -734,7 +759,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed64(322);
     private readonly pbc::RepeatedField<long> repeatedSfixed64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> RepeatedSfixed64 {
       get { return repeatedSfixed64_; }
     }
@@ -745,7 +770,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFloat(330);
     private readonly pbc::RepeatedField<float> repeatedFloat_ = new pbc::RepeatedField<float>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<float> RepeatedFloat {
       get { return repeatedFloat_; }
     }
@@ -756,7 +781,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForDouble(338);
     private readonly pbc::RepeatedField<double> repeatedDouble_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<double> RepeatedDouble {
       get { return repeatedDouble_; }
     }
@@ -767,7 +792,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForBool(346);
     private readonly pbc::RepeatedField<bool> repeatedBool_ = new pbc::RepeatedField<bool>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<bool> RepeatedBool {
       get { return repeatedBool_; }
     }
@@ -778,7 +803,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForString(354);
     private readonly pbc::RepeatedField<string> repeatedString_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<string> RepeatedString {
       get { return repeatedString_; }
     }
@@ -789,7 +814,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForBytes(362);
     private readonly pbc::RepeatedField<pb::ByteString> repeatedBytes_ = new pbc::RepeatedField<pb::ByteString>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<pb::ByteString> RepeatedBytes {
       get { return repeatedBytes_; }
     }
@@ -800,7 +825,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(386, global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage> repeatedNestedMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage> RepeatedNestedMessage {
       get { return repeatedNestedMessage_; }
     }
@@ -811,7 +836,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(394, global::Google.Protobuf.TestProtos.ForeignMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> repeatedForeignMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> RepeatedForeignMessage {
       get { return repeatedForeignMessage_; }
     }
@@ -822,7 +847,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(402, global::Google.Protobuf.TestProtos.ImportMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage> repeatedImportMessage_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportMessage> RepeatedImportMessage {
       get { return repeatedImportMessage_; }
     }
@@ -833,7 +858,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(410, x => (int) x, x => (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum> repeatedNestedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedEnum> RepeatedNestedEnum {
       get { return repeatedNestedEnum_; }
     }
@@ -844,7 +869,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(418, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> repeatedForeignEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> RepeatedForeignEnum {
       get { return repeatedForeignEnum_; }
     }
@@ -855,7 +880,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(426, x => (int) x, x => (global::Google.Protobuf.TestProtos.ImportEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum> repeatedImportEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ImportEnum> RepeatedImportEnum {
       get { return repeatedImportEnum_; }
     }
@@ -869,7 +894,7 @@ namespace Google.Protobuf.TestProtos {
     /// Defined in unittest_import_public.proto
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.PublicImportMessage> RepeatedPublicImportMessage {
       get { return repeatedPublicImportMessage_; }
     }
@@ -877,7 +902,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "oneof_uint32" field.</summary>
     public const int OneofUint32FieldNumber = 111;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public uint OneofUint32 {
       get { return oneofFieldCase_ == OneofFieldOneofCase.OneofUint32 ? (uint) oneofField_ : 0; }
       set {
@@ -889,7 +914,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "oneof_nested_message" field.</summary>
     public const int OneofNestedMessageFieldNumber = 112;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage OneofNestedMessage {
       get { return oneofFieldCase_ == OneofFieldOneofCase.OneofNestedMessage ? (global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage) oneofField_ : null; }
       set {
@@ -901,7 +926,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "oneof_string" field.</summary>
     public const int OneofStringFieldNumber = 113;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string OneofString {
       get { return oneofFieldCase_ == OneofFieldOneofCase.OneofString ? (string) oneofField_ : ""; }
       set {
@@ -913,7 +938,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "oneof_bytes" field.</summary>
     public const int OneofBytesFieldNumber = 114;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pb::ByteString OneofBytes {
       get { return oneofFieldCase_ == OneofFieldOneofCase.OneofBytes ? (pb::ByteString) oneofField_ : pb::ByteString.Empty; }
       set {
@@ -933,26 +958,26 @@ namespace Google.Protobuf.TestProtos {
     }
     private OneofFieldOneofCase oneofFieldCase_ = OneofFieldOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneofFieldOneofCase OneofFieldCase {
       get { return oneofFieldCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void ClearOneofField() {
       oneofFieldCase_ = OneofFieldOneofCase.None;
       oneofField_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestAllTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestAllTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1013,7 +1038,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (SingleInt32 != 0) hash ^= SingleInt32.GetHashCode();
@@ -1072,13 +1097,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1217,7 +1242,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SingleInt32 != 0) {
         output.WriteRawTag(8);
@@ -1352,7 +1377,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (SingleInt32 != 0) {
@@ -1462,7 +1487,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestAllTypes other) {
       if (other == null) {
         return;
@@ -1589,7 +1614,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1832,7 +1857,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2073,7 +2098,7 @@ namespace Google.Protobuf.TestProtos {
     #region Nested types
     /// <summary>Container for nested types declared in the TestAllTypes message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static partial class Types {
       public enum NestedEnum {
         [pbr::OriginalName("NESTED_ENUM_UNSPECIFIED")] Unspecified = 0,
@@ -2091,41 +2116,44 @@ namespace Google.Protobuf.TestProtos {
           , pb::IBufferMessage
       #endif
       {
+        private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.TestAllTypes.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage() {
+          global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage(NestedMessage other) : this() {
           bb_ = other.bb_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage Clone() {
           return new NestedMessage(this);
         }
@@ -2139,7 +2167,7 @@ namespace Google.Protobuf.TestProtos {
         /// This file needs to compile in proto1 to test backwards-compatibility.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public int Bb {
           get { return bb_; }
           set {
@@ -2148,13 +2176,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override bool Equals(object other) {
           return Equals(other as NestedMessage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public bool Equals(NestedMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2167,7 +2195,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override int GetHashCode() {
           int hash = 1;
           if (Bb != 0) hash ^= Bb.GetHashCode();
@@ -2178,13 +2206,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2201,7 +2229,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
@@ -2214,7 +2242,7 @@ namespace Google.Protobuf.TestProtos {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public int CalculateSize() {
           int size = 0;
           if (Bb != 0) {
@@ -2227,7 +2255,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(NestedMessage other) {
           if (other == null) {
             return;
@@ -2239,7 +2267,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2261,7 +2289,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2293,34 +2321,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<NestedTestAllTypes> _parser = new pb::MessageParser<NestedTestAllTypes>(() => new NestedTestAllTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<NestedTestAllTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public NestedTestAllTypes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public NestedTestAllTypes(NestedTestAllTypes other) : this() {
       child_ = other.child_ != null ? other.child_.Clone() : null;
       payload_ = other.payload_ != null ? other.payload_.Clone() : null;
@@ -2329,7 +2360,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public NestedTestAllTypes Clone() {
       return new NestedTestAllTypes(this);
     }
@@ -2338,7 +2369,7 @@ namespace Google.Protobuf.TestProtos {
     public const int ChildFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.NestedTestAllTypes child_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.NestedTestAllTypes Child {
       get { return child_; }
       set {
@@ -2350,7 +2381,7 @@ namespace Google.Protobuf.TestProtos {
     public const int PayloadFieldNumber = 2;
     private global::Google.Protobuf.TestProtos.TestAllTypes payload_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes Payload {
       get { return payload_; }
       set {
@@ -2364,19 +2395,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(26, global::Google.Protobuf.TestProtos.NestedTestAllTypes.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes> repeatedChild_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.NestedTestAllTypes> RepeatedChild {
       get { return repeatedChild_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as NestedTestAllTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(NestedTestAllTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2391,7 +2422,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (child_ != null) hash ^= Child.GetHashCode();
@@ -2404,13 +2435,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2432,7 +2463,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (child_ != null) {
         output.WriteRawTag(10);
@@ -2450,7 +2481,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (child_ != null) {
@@ -2467,7 +2498,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(NestedTestAllTypes other) {
       if (other == null) {
         return;
@@ -2489,7 +2520,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2525,7 +2556,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2563,41 +2594,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestDeprecatedFields> _parser = new pb::MessageParser<TestDeprecatedFields>(() => new TestDeprecatedFields());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestDeprecatedFields> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestDeprecatedFields() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestDeprecatedFields(TestDeprecatedFields other) : this() {
       deprecatedInt32_ = other.deprecatedInt32_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestDeprecatedFields Clone() {
       return new TestDeprecatedFields(this);
     }
@@ -2607,7 +2641,7 @@ namespace Google.Protobuf.TestProtos {
     private int deprecatedInt32_;
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int DeprecatedInt32 {
       get { return deprecatedInt32_; }
       set {
@@ -2616,13 +2650,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestDeprecatedFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestDeprecatedFields other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2635,7 +2669,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (DeprecatedInt32 != 0) hash ^= DeprecatedInt32.GetHashCode();
@@ -2646,13 +2680,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2669,7 +2703,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DeprecatedInt32 != 0) {
         output.WriteRawTag(8);
@@ -2682,7 +2716,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (DeprecatedInt32 != 0) {
@@ -2695,7 +2729,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestDeprecatedFields other) {
       if (other == null) {
         return;
@@ -2707,7 +2741,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2729,7 +2763,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2757,41 +2791,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<ForeignMessage> _parser = new pb::MessageParser<ForeignMessage>(() => new ForeignMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<ForeignMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ForeignMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ForeignMessage(ForeignMessage other) : this() {
       c_ = other.c_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ForeignMessage Clone() {
       return new ForeignMessage(this);
     }
@@ -2800,7 +2837,7 @@ namespace Google.Protobuf.TestProtos {
     public const int CFieldNumber = 1;
     private int c_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int C {
       get { return c_; }
       set {
@@ -2809,13 +2846,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as ForeignMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(ForeignMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2828,7 +2865,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (C != 0) hash ^= C.GetHashCode();
@@ -2839,13 +2876,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2862,7 +2899,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (C != 0) {
         output.WriteRawTag(8);
@@ -2875,7 +2912,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (C != 0) {
@@ -2888,7 +2925,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(ForeignMessage other) {
       if (other == null) {
         return;
@@ -2900,7 +2937,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2922,7 +2959,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2946,52 +2983,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestReservedFields> _parser = new pb::MessageParser<TestReservedFields>(() => new TestReservedFields());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestReservedFields> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReservedFields() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReservedFields(TestReservedFields other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReservedFields Clone() {
       return new TestReservedFields(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestReservedFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestReservedFields other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3003,7 +3043,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -3013,13 +3053,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3032,7 +3072,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3041,7 +3081,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -3051,7 +3091,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestReservedFields other) {
       if (other == null) {
         return;
@@ -3060,7 +3100,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3078,7 +3118,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3101,41 +3141,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestForeignNested> _parser = new pb::MessageParser<TestForeignNested>(() => new TestForeignNested());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestForeignNested> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestForeignNested() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestForeignNested(TestForeignNested other) : this() {
       foreignNested_ = other.foreignNested_ != null ? other.foreignNested_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestForeignNested Clone() {
       return new TestForeignNested(this);
     }
@@ -3144,7 +3187,7 @@ namespace Google.Protobuf.TestProtos {
     public const int ForeignNestedFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage foreignNested_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes.Types.NestedMessage ForeignNested {
       get { return foreignNested_; }
       set {
@@ -3153,13 +3196,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestForeignNested);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestForeignNested other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3172,7 +3215,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (foreignNested_ != null) hash ^= ForeignNested.GetHashCode();
@@ -3183,13 +3226,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3206,7 +3249,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (foreignNested_ != null) {
         output.WriteRawTag(10);
@@ -3219,7 +3262,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (foreignNested_ != null) {
@@ -3232,7 +3275,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestForeignNested other) {
       if (other == null) {
         return;
@@ -3247,7 +3290,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3272,7 +3315,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3302,34 +3345,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestReallyLargeTagNumber> _parser = new pb::MessageParser<TestReallyLargeTagNumber>(() => new TestReallyLargeTagNumber());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestReallyLargeTagNumber> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReallyLargeTagNumber() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReallyLargeTagNumber(TestReallyLargeTagNumber other) : this() {
       a_ = other.a_;
       bb_ = other.bb_;
@@ -3337,7 +3383,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestReallyLargeTagNumber Clone() {
       return new TestReallyLargeTagNumber(this);
     }
@@ -3350,7 +3396,7 @@ namespace Google.Protobuf.TestProtos {
     /// three bits to communicate wire type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int A {
       get { return a_; }
       set {
@@ -3362,7 +3408,7 @@ namespace Google.Protobuf.TestProtos {
     public const int BbFieldNumber = 268435455;
     private int bb_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int Bb {
       get { return bb_; }
       set {
@@ -3371,13 +3417,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestReallyLargeTagNumber);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestReallyLargeTagNumber other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3391,7 +3437,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (A != 0) hash ^= A.GetHashCode();
@@ -3403,13 +3449,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3430,7 +3476,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (A != 0) {
         output.WriteRawTag(8);
@@ -3447,7 +3493,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (A != 0) {
@@ -3463,7 +3509,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestReallyLargeTagNumber other) {
       if (other == null) {
         return;
@@ -3478,7 +3524,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3504,7 +3550,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3532,34 +3578,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestRecursiveMessage> _parser = new pb::MessageParser<TestRecursiveMessage>(() => new TestRecursiveMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestRecursiveMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRecursiveMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRecursiveMessage(TestRecursiveMessage other) : this() {
       a_ = other.a_ != null ? other.a_.Clone() : null;
       i_ = other.i_;
@@ -3567,7 +3616,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRecursiveMessage Clone() {
       return new TestRecursiveMessage(this);
     }
@@ -3576,7 +3625,7 @@ namespace Google.Protobuf.TestProtos {
     public const int AFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestRecursiveMessage a_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestRecursiveMessage A {
       get { return a_; }
       set {
@@ -3588,7 +3637,7 @@ namespace Google.Protobuf.TestProtos {
     public const int IFieldNumber = 2;
     private int i_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int I {
       get { return i_; }
       set {
@@ -3597,13 +3646,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestRecursiveMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestRecursiveMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3617,7 +3666,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (a_ != null) hash ^= A.GetHashCode();
@@ -3629,13 +3678,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3656,7 +3705,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (a_ != null) {
         output.WriteRawTag(10);
@@ -3673,7 +3722,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (a_ != null) {
@@ -3689,7 +3738,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestRecursiveMessage other) {
       if (other == null) {
         return;
@@ -3707,7 +3756,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3736,7 +3785,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3770,41 +3819,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestMutualRecursionA> _parser = new pb::MessageParser<TestMutualRecursionA>(() => new TestMutualRecursionA());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestMutualRecursionA> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionA() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionA(TestMutualRecursionA other) : this() {
       bb_ = other.bb_ != null ? other.bb_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionA Clone() {
       return new TestMutualRecursionA(this);
     }
@@ -3813,7 +3865,7 @@ namespace Google.Protobuf.TestProtos {
     public const int BbFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestMutualRecursionB bb_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestMutualRecursionB Bb {
       get { return bb_; }
       set {
@@ -3822,13 +3874,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestMutualRecursionA);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestMutualRecursionA other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3841,7 +3893,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (bb_ != null) hash ^= Bb.GetHashCode();
@@ -3852,13 +3904,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3875,7 +3927,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (bb_ != null) {
         output.WriteRawTag(10);
@@ -3888,7 +3940,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (bb_ != null) {
@@ -3901,7 +3953,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestMutualRecursionA other) {
       if (other == null) {
         return;
@@ -3916,7 +3968,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3941,7 +3993,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3968,34 +4020,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestMutualRecursionB> _parser = new pb::MessageParser<TestMutualRecursionB>(() => new TestMutualRecursionB());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestMutualRecursionB> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionB() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionB(TestMutualRecursionB other) : this() {
       a_ = other.a_ != null ? other.a_.Clone() : null;
       optionalInt32_ = other.optionalInt32_;
@@ -4003,7 +4058,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestMutualRecursionB Clone() {
       return new TestMutualRecursionB(this);
     }
@@ -4012,7 +4067,7 @@ namespace Google.Protobuf.TestProtos {
     public const int AFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestMutualRecursionA a_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestMutualRecursionA A {
       get { return a_; }
       set {
@@ -4024,7 +4079,7 @@ namespace Google.Protobuf.TestProtos {
     public const int OptionalInt32FieldNumber = 2;
     private int optionalInt32_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int OptionalInt32 {
       get { return optionalInt32_; }
       set {
@@ -4033,13 +4088,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestMutualRecursionB);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestMutualRecursionB other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4053,7 +4108,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (a_ != null) hash ^= A.GetHashCode();
@@ -4065,13 +4120,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4092,7 +4147,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (a_ != null) {
         output.WriteRawTag(10);
@@ -4109,7 +4164,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (a_ != null) {
@@ -4125,7 +4180,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestMutualRecursionB other) {
       if (other == null) {
         return;
@@ -4143,7 +4198,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4172,7 +4227,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4203,41 +4258,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestEnumAllowAlias> _parser = new pb::MessageParser<TestEnumAllowAlias>(() => new TestEnumAllowAlias());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestEnumAllowAlias> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEnumAllowAlias() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEnumAllowAlias(TestEnumAllowAlias other) : this() {
       value_ = other.value_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEnumAllowAlias Clone() {
       return new TestEnumAllowAlias(this);
     }
@@ -4246,7 +4304,7 @@ namespace Google.Protobuf.TestProtos {
     public const int ValueFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestEnumWithDupValue value_ = global::Google.Protobuf.TestProtos.TestEnumWithDupValue.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestEnumWithDupValue Value {
       get { return value_; }
       set {
@@ -4255,13 +4313,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestEnumAllowAlias);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestEnumAllowAlias other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4274,7 +4332,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Value != global::Google.Protobuf.TestProtos.TestEnumWithDupValue.Unspecified) hash ^= Value.GetHashCode();
@@ -4285,13 +4343,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4308,7 +4366,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Value != global::Google.Protobuf.TestProtos.TestEnumWithDupValue.Unspecified) {
         output.WriteRawTag(8);
@@ -4321,7 +4379,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Value != global::Google.Protobuf.TestProtos.TestEnumWithDupValue.Unspecified) {
@@ -4334,7 +4392,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestEnumAllowAlias other) {
       if (other == null) {
         return;
@@ -4346,7 +4404,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4368,7 +4426,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4396,34 +4454,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestCamelCaseFieldNames> _parser = new pb::MessageParser<TestCamelCaseFieldNames>(() => new TestCamelCaseFieldNames());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestCamelCaseFieldNames> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCamelCaseFieldNames() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCamelCaseFieldNames(TestCamelCaseFieldNames other) : this() {
       primitiveField_ = other.primitiveField_;
       stringField_ = other.stringField_;
@@ -4437,7 +4498,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCamelCaseFieldNames Clone() {
       return new TestCamelCaseFieldNames(this);
     }
@@ -4446,7 +4507,7 @@ namespace Google.Protobuf.TestProtos {
     public const int PrimitiveFieldFieldNumber = 1;
     private int primitiveField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int PrimitiveField {
       get { return primitiveField_; }
       set {
@@ -4458,7 +4519,7 @@ namespace Google.Protobuf.TestProtos {
     public const int StringFieldFieldNumber = 2;
     private string stringField_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string StringField {
       get { return stringField_; }
       set {
@@ -4470,7 +4531,7 @@ namespace Google.Protobuf.TestProtos {
     public const int EnumFieldFieldNumber = 3;
     private global::Google.Protobuf.TestProtos.ForeignEnum enumField_ = global::Google.Protobuf.TestProtos.ForeignEnum.ForeignUnspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ForeignEnum EnumField {
       get { return enumField_; }
       set {
@@ -4482,7 +4543,7 @@ namespace Google.Protobuf.TestProtos {
     public const int MessageFieldFieldNumber = 4;
     private global::Google.Protobuf.TestProtos.ForeignMessage messageField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.ForeignMessage MessageField {
       get { return messageField_; }
       set {
@@ -4496,7 +4557,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt32(58);
     private readonly pbc::RepeatedField<int> repeatedPrimitiveField_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> RepeatedPrimitiveField {
       get { return repeatedPrimitiveField_; }
     }
@@ -4507,7 +4568,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForString(66);
     private readonly pbc::RepeatedField<string> repeatedStringField_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<string> RepeatedStringField {
       get { return repeatedStringField_; }
     }
@@ -4518,7 +4579,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(74, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> repeatedEnumField_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> RepeatedEnumField {
       get { return repeatedEnumField_; }
     }
@@ -4529,19 +4590,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(82, global::Google.Protobuf.TestProtos.ForeignMessage.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> repeatedMessageField_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignMessage> RepeatedMessageField {
       get { return repeatedMessageField_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestCamelCaseFieldNames);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestCamelCaseFieldNames other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4561,7 +4622,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (PrimitiveField != 0) hash ^= PrimitiveField.GetHashCode();
@@ -4579,13 +4640,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4618,7 +4679,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PrimitiveField != 0) {
         output.WriteRawTag(8);
@@ -4647,7 +4708,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (PrimitiveField != 0) {
@@ -4673,7 +4734,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestCamelCaseFieldNames other) {
       if (other == null) {
         return;
@@ -4701,7 +4762,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4756,7 +4817,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4817,34 +4878,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestFieldOrderings> _parser = new pb::MessageParser<TestFieldOrderings>(() => new TestFieldOrderings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestFieldOrderings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestFieldOrderings() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestFieldOrderings(TestFieldOrderings other) : this() {
       myString_ = other.myString_;
       myInt_ = other.myInt_;
@@ -4854,7 +4918,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestFieldOrderings Clone() {
       return new TestFieldOrderings(this);
     }
@@ -4863,7 +4927,7 @@ namespace Google.Protobuf.TestProtos {
     public const int MyStringFieldNumber = 11;
     private string myString_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string MyString {
       get { return myString_; }
       set {
@@ -4875,7 +4939,7 @@ namespace Google.Protobuf.TestProtos {
     public const int MyIntFieldNumber = 1;
     private long myInt_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public long MyInt {
       get { return myInt_; }
       set {
@@ -4887,7 +4951,7 @@ namespace Google.Protobuf.TestProtos {
     public const int MyFloatFieldNumber = 101;
     private float myFloat_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public float MyFloat {
       get { return myFloat_; }
       set {
@@ -4899,7 +4963,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SingleNestedMessageFieldNumber = 200;
     private global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage singleNestedMessage_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestFieldOrderings.Types.NestedMessage SingleNestedMessage {
       get { return singleNestedMessage_; }
       set {
@@ -4908,13 +4972,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestFieldOrderings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestFieldOrderings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4930,7 +4994,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (MyString.Length != 0) hash ^= MyString.GetHashCode();
@@ -4944,13 +5008,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4979,7 +5043,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MyInt != 0L) {
         output.WriteRawTag(8);
@@ -5004,7 +5068,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (MyString.Length != 0) {
@@ -5026,7 +5090,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestFieldOrderings other) {
       if (other == null) {
         return;
@@ -5050,7 +5114,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5087,7 +5151,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5122,41 +5186,44 @@ namespace Google.Protobuf.TestProtos {
     #region Nested types
     /// <summary>Container for nested types declared in the TestFieldOrderings message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static partial class Types {
       public sealed partial class NestedMessage : pb::IMessage<NestedMessage>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
+        private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
         private static readonly pb::MessageParser<NestedMessage> _parser = new pb::MessageParser<NestedMessage>(() => new NestedMessage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pb::MessageParser<NestedMessage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.TestFieldOrderings.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage() {
+          global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage(NestedMessage other) : this() {
           oo_ = other.oo_;
           bb_ = other.bb_;
@@ -5164,7 +5231,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedMessage Clone() {
           return new NestedMessage(this);
         }
@@ -5173,7 +5240,7 @@ namespace Google.Protobuf.TestProtos {
         public const int OoFieldNumber = 2;
         private long oo_;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public long Oo {
           get { return oo_; }
           set {
@@ -5190,7 +5257,7 @@ namespace Google.Protobuf.TestProtos {
         /// This file needs to compile in proto1 to test backwards-compatibility.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public int Bb {
           get { return bb_; }
           set {
@@ -5199,13 +5266,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override bool Equals(object other) {
           return Equals(other as NestedMessage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public bool Equals(NestedMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5219,7 +5286,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override int GetHashCode() {
           int hash = 1;
           if (Oo != 0L) hash ^= Oo.GetHashCode();
@@ -5231,13 +5298,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5258,7 +5325,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Bb != 0) {
             output.WriteRawTag(8);
@@ -5275,7 +5342,7 @@ namespace Google.Protobuf.TestProtos {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public int CalculateSize() {
           int size = 0;
           if (Oo != 0L) {
@@ -5291,7 +5358,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(NestedMessage other) {
           if (other == null) {
             return;
@@ -5306,7 +5373,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5332,7 +5399,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5365,41 +5432,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<SparseEnumMessage> _parser = new pb::MessageParser<SparseEnumMessage>(() => new SparseEnumMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<SparseEnumMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public SparseEnumMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public SparseEnumMessage(SparseEnumMessage other) : this() {
       sparseEnum_ = other.sparseEnum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public SparseEnumMessage Clone() {
       return new SparseEnumMessage(this);
     }
@@ -5408,7 +5478,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SparseEnumFieldNumber = 1;
     private global::Google.Protobuf.TestProtos.TestSparseEnum sparseEnum_ = global::Google.Protobuf.TestProtos.TestSparseEnum.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestSparseEnum SparseEnum {
       get { return sparseEnum_; }
       set {
@@ -5417,13 +5487,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as SparseEnumMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(SparseEnumMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5436,7 +5506,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (SparseEnum != global::Google.Protobuf.TestProtos.TestSparseEnum.Unspecified) hash ^= SparseEnum.GetHashCode();
@@ -5447,13 +5517,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5470,7 +5540,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SparseEnum != global::Google.Protobuf.TestProtos.TestSparseEnum.Unspecified) {
         output.WriteRawTag(8);
@@ -5483,7 +5553,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (SparseEnum != global::Google.Protobuf.TestProtos.TestSparseEnum.Unspecified) {
@@ -5496,7 +5566,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(SparseEnumMessage other) {
       if (other == null) {
         return;
@@ -5508,7 +5578,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5530,7 +5600,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5557,41 +5627,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<OneString> _parser = new pb::MessageParser<OneString>(() => new OneString());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<OneString> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneString() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneString(OneString other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneString Clone() {
       return new OneString(this);
     }
@@ -5600,7 +5673,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private string data_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string Data {
       get { return data_; }
       set {
@@ -5609,13 +5682,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as OneString);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(OneString other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5628,7 +5701,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -5639,13 +5712,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5662,7 +5735,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
@@ -5675,7 +5748,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
@@ -5688,7 +5761,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(OneString other) {
       if (other == null) {
         return;
@@ -5700,7 +5773,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5722,7 +5795,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5746,41 +5819,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<MoreString> _parser = new pb::MessageParser<MoreString>(() => new MoreString());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<MoreString> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreString() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreString(MoreString other) : this() {
       data_ = other.data_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreString Clone() {
       return new MoreString(this);
     }
@@ -5791,19 +5867,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> data_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<string> Data {
       get { return data_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as MoreString);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(MoreString other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5816,7 +5892,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= data_.GetHashCode();
@@ -5827,13 +5903,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5847,7 +5923,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       data_.WriteTo(ref output, _repeated_data_codec);
       if (_unknownFields != null) {
@@ -5857,7 +5933,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += data_.CalculateSize(_repeated_data_codec);
@@ -5868,7 +5944,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(MoreString other) {
       if (other == null) {
         return;
@@ -5878,7 +5954,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5900,7 +5976,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5924,41 +6000,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<OneBytes> _parser = new pb::MessageParser<OneBytes>(() => new OneBytes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<OneBytes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneBytes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneBytes(OneBytes other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public OneBytes Clone() {
       return new OneBytes(this);
     }
@@ -5967,7 +6046,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -5976,13 +6055,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as OneBytes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(OneBytes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5995,7 +6074,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -6006,13 +6085,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6029,7 +6108,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
@@ -6042,7 +6121,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
@@ -6055,7 +6134,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(OneBytes other) {
       if (other == null) {
         return;
@@ -6067,7 +6146,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6089,7 +6168,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6113,41 +6192,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<MoreBytes> _parser = new pb::MessageParser<MoreBytes>(() => new MoreBytes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<MoreBytes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreBytes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreBytes(MoreBytes other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public MoreBytes Clone() {
       return new MoreBytes(this);
     }
@@ -6156,7 +6238,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private pb::ByteString data_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pb::ByteString Data {
       get { return data_; }
       set {
@@ -6165,13 +6247,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as MoreBytes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(MoreBytes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6184,7 +6266,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
@@ -6195,13 +6277,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6218,7 +6300,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data.Length != 0) {
         output.WriteRawTag(10);
@@ -6231,7 +6313,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data.Length != 0) {
@@ -6244,7 +6326,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(MoreBytes other) {
       if (other == null) {
         return;
@@ -6256,7 +6338,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6278,7 +6360,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6305,41 +6387,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Int32Message> _parser = new pb::MessageParser<Int32Message>(() => new Int32Message());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<Int32Message> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int32Message() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int32Message(Int32Message other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int32Message Clone() {
       return new Int32Message(this);
     }
@@ -6348,7 +6433,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private int data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int Data {
       get { return data_; }
       set {
@@ -6357,13 +6442,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Int32Message);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(Int32Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6376,7 +6461,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0) hash ^= Data.GetHashCode();
@@ -6387,13 +6472,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6410,7 +6495,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data != 0) {
         output.WriteRawTag(8);
@@ -6423,7 +6508,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0) {
@@ -6436,7 +6521,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(Int32Message other) {
       if (other == null) {
         return;
@@ -6448,7 +6533,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6470,7 +6555,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6494,41 +6579,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Uint32Message> _parser = new pb::MessageParser<Uint32Message>(() => new Uint32Message());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<Uint32Message> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint32Message() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint32Message(Uint32Message other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint32Message Clone() {
       return new Uint32Message(this);
     }
@@ -6537,7 +6625,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private uint data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public uint Data {
       get { return data_; }
       set {
@@ -6546,13 +6634,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Uint32Message);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(Uint32Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6565,7 +6653,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0) hash ^= Data.GetHashCode();
@@ -6576,13 +6664,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6599,7 +6687,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data != 0) {
         output.WriteRawTag(8);
@@ -6612,7 +6700,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0) {
@@ -6625,7 +6713,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(Uint32Message other) {
       if (other == null) {
         return;
@@ -6637,7 +6725,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6659,7 +6747,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6683,41 +6771,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Int64Message> _parser = new pb::MessageParser<Int64Message>(() => new Int64Message());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<Int64Message> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int64Message() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int64Message(Int64Message other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Int64Message Clone() {
       return new Int64Message(this);
     }
@@ -6726,7 +6817,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private long data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public long Data {
       get { return data_; }
       set {
@@ -6735,13 +6826,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Int64Message);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(Int64Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6754,7 +6845,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0L) hash ^= Data.GetHashCode();
@@ -6765,13 +6856,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6788,7 +6879,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data != 0L) {
         output.WriteRawTag(8);
@@ -6801,7 +6892,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0L) {
@@ -6814,7 +6905,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(Int64Message other) {
       if (other == null) {
         return;
@@ -6826,7 +6917,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6848,7 +6939,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6872,41 +6963,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Uint64Message> _parser = new pb::MessageParser<Uint64Message>(() => new Uint64Message());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<Uint64Message> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint64Message() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint64Message(Uint64Message other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public Uint64Message Clone() {
       return new Uint64Message(this);
     }
@@ -6915,7 +7009,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private ulong data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public ulong Data {
       get { return data_; }
       set {
@@ -6924,13 +7018,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Uint64Message);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(Uint64Message other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6943,7 +7037,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != 0UL) hash ^= Data.GetHashCode();
@@ -6954,13 +7048,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6977,7 +7071,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data != 0UL) {
         output.WriteRawTag(8);
@@ -6990,7 +7084,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data != 0UL) {
@@ -7003,7 +7097,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(Uint64Message other) {
       if (other == null) {
         return;
@@ -7015,7 +7109,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7037,7 +7131,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7061,41 +7155,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<BoolMessage> _parser = new pb::MessageParser<BoolMessage>(() => new BoolMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<BoolMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BoolMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BoolMessage(BoolMessage other) : this() {
       data_ = other.data_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BoolMessage Clone() {
       return new BoolMessage(this);
     }
@@ -7104,7 +7201,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DataFieldNumber = 1;
     private bool data_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Data {
       get { return data_; }
       set {
@@ -7113,13 +7210,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as BoolMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(BoolMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7132,7 +7229,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Data != false) hash ^= Data.GetHashCode();
@@ -7143,13 +7240,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7166,7 +7263,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Data != false) {
         output.WriteRawTag(8);
@@ -7179,7 +7276,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Data != false) {
@@ -7192,7 +7289,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(BoolMessage other) {
       if (other == null) {
         return;
@@ -7204,7 +7301,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7226,7 +7323,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7253,34 +7350,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestOneof> _parser = new pb::MessageParser<TestOneof>(() => new TestOneof());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestOneof> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestOneof() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestOneof(TestOneof other) : this() {
       switch (other.FooCase) {
         case FooOneofCase.FooInt:
@@ -7298,7 +7398,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestOneof Clone() {
       return new TestOneof(this);
     }
@@ -7306,7 +7406,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "foo_int" field.</summary>
     public const int FooIntFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int FooInt {
       get { return fooCase_ == FooOneofCase.FooInt ? (int) foo_ : 0; }
       set {
@@ -7318,7 +7418,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "foo_string" field.</summary>
     public const int FooStringFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string FooString {
       get { return fooCase_ == FooOneofCase.FooString ? (string) foo_ : ""; }
       set {
@@ -7330,7 +7430,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "foo_message" field.</summary>
     public const int FooMessageFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public global::Google.Protobuf.TestProtos.TestAllTypes FooMessage {
       get { return fooCase_ == FooOneofCase.FooMessage ? (global::Google.Protobuf.TestProtos.TestAllTypes) foo_ : null; }
       set {
@@ -7349,26 +7449,26 @@ namespace Google.Protobuf.TestProtos {
     }
     private FooOneofCase fooCase_ = FooOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooOneofCase FooCase {
       get { return fooCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void ClearFoo() {
       fooCase_ = FooOneofCase.None;
       foo_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestOneof);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestOneof other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7384,7 +7484,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (fooCase_ == FooOneofCase.FooInt) hash ^= FooInt.GetHashCode();
@@ -7398,13 +7498,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7429,7 +7529,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (fooCase_ == FooOneofCase.FooInt) {
         output.WriteRawTag(8);
@@ -7450,7 +7550,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (fooCase_ == FooOneofCase.FooInt) {
@@ -7469,7 +7569,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestOneof other) {
       if (other == null) {
         return;
@@ -7493,7 +7593,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7528,7 +7628,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7565,34 +7665,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestPackedTypes> _parser = new pb::MessageParser<TestPackedTypes>(() => new TestPackedTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestPackedTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestPackedTypes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestPackedTypes(TestPackedTypes other) : this() {
       packedInt32_ = other.packedInt32_.Clone();
       packedInt64_ = other.packedInt64_.Clone();
@@ -7612,7 +7715,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestPackedTypes Clone() {
       return new TestPackedTypes(this);
     }
@@ -7623,7 +7726,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt32(722);
     private readonly pbc::RepeatedField<int> packedInt32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> PackedInt32 {
       get { return packedInt32_; }
     }
@@ -7634,7 +7737,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt64(730);
     private readonly pbc::RepeatedField<long> packedInt64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> PackedInt64 {
       get { return packedInt64_; }
     }
@@ -7645,7 +7748,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt32(738);
     private readonly pbc::RepeatedField<uint> packedUint32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> PackedUint32 {
       get { return packedUint32_; }
     }
@@ -7656,7 +7759,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt64(746);
     private readonly pbc::RepeatedField<ulong> packedUint64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> PackedUint64 {
       get { return packedUint64_; }
     }
@@ -7667,7 +7770,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt32(754);
     private readonly pbc::RepeatedField<int> packedSint32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> PackedSint32 {
       get { return packedSint32_; }
     }
@@ -7678,7 +7781,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt64(762);
     private readonly pbc::RepeatedField<long> packedSint64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> PackedSint64 {
       get { return packedSint64_; }
     }
@@ -7689,7 +7792,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed32(770);
     private readonly pbc::RepeatedField<uint> packedFixed32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> PackedFixed32 {
       get { return packedFixed32_; }
     }
@@ -7700,7 +7803,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed64(778);
     private readonly pbc::RepeatedField<ulong> packedFixed64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> PackedFixed64 {
       get { return packedFixed64_; }
     }
@@ -7711,7 +7814,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed32(786);
     private readonly pbc::RepeatedField<int> packedSfixed32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> PackedSfixed32 {
       get { return packedSfixed32_; }
     }
@@ -7722,7 +7825,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed64(794);
     private readonly pbc::RepeatedField<long> packedSfixed64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> PackedSfixed64 {
       get { return packedSfixed64_; }
     }
@@ -7733,7 +7836,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFloat(802);
     private readonly pbc::RepeatedField<float> packedFloat_ = new pbc::RepeatedField<float>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<float> PackedFloat {
       get { return packedFloat_; }
     }
@@ -7744,7 +7847,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForDouble(810);
     private readonly pbc::RepeatedField<double> packedDouble_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<double> PackedDouble {
       get { return packedDouble_; }
     }
@@ -7755,7 +7858,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForBool(818);
     private readonly pbc::RepeatedField<bool> packedBool_ = new pbc::RepeatedField<bool>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<bool> PackedBool {
       get { return packedBool_; }
     }
@@ -7766,19 +7869,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(826, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> packedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> PackedEnum {
       get { return packedEnum_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestPackedTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestPackedTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7804,7 +7907,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= packedInt32_.GetHashCode();
@@ -7828,13 +7931,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7861,7 +7964,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       packedInt32_.WriteTo(ref output, _repeated_packedInt32_codec);
       packedInt64_.WriteTo(ref output, _repeated_packedInt64_codec);
@@ -7884,7 +7987,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += packedInt32_.CalculateSize(_repeated_packedInt32_codec);
@@ -7908,7 +8011,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestPackedTypes other) {
       if (other == null) {
         return;
@@ -7931,7 +8034,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8019,7 +8122,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8113,34 +8216,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestUnpackedTypes> _parser = new pb::MessageParser<TestUnpackedTypes>(() => new TestUnpackedTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestUnpackedTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestUnpackedTypes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestUnpackedTypes(TestUnpackedTypes other) : this() {
       unpackedInt32_ = other.unpackedInt32_.Clone();
       unpackedInt64_ = other.unpackedInt64_.Clone();
@@ -8160,7 +8266,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestUnpackedTypes Clone() {
       return new TestUnpackedTypes(this);
     }
@@ -8171,7 +8277,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt32(720);
     private readonly pbc::RepeatedField<int> unpackedInt32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> UnpackedInt32 {
       get { return unpackedInt32_; }
     }
@@ -8182,7 +8288,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt64(728);
     private readonly pbc::RepeatedField<long> unpackedInt64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> UnpackedInt64 {
       get { return unpackedInt64_; }
     }
@@ -8193,7 +8299,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt32(736);
     private readonly pbc::RepeatedField<uint> unpackedUint32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> UnpackedUint32 {
       get { return unpackedUint32_; }
     }
@@ -8204,7 +8310,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt64(744);
     private readonly pbc::RepeatedField<ulong> unpackedUint64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> UnpackedUint64 {
       get { return unpackedUint64_; }
     }
@@ -8215,7 +8321,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt32(752);
     private readonly pbc::RepeatedField<int> unpackedSint32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> UnpackedSint32 {
       get { return unpackedSint32_; }
     }
@@ -8226,7 +8332,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSInt64(760);
     private readonly pbc::RepeatedField<long> unpackedSint64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> UnpackedSint64 {
       get { return unpackedSint64_; }
     }
@@ -8237,7 +8343,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed32(773);
     private readonly pbc::RepeatedField<uint> unpackedFixed32_ = new pbc::RepeatedField<uint>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> UnpackedFixed32 {
       get { return unpackedFixed32_; }
     }
@@ -8248,7 +8354,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFixed64(777);
     private readonly pbc::RepeatedField<ulong> unpackedFixed64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> UnpackedFixed64 {
       get { return unpackedFixed64_; }
     }
@@ -8259,7 +8365,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed32(789);
     private readonly pbc::RepeatedField<int> unpackedSfixed32_ = new pbc::RepeatedField<int>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> UnpackedSfixed32 {
       get { return unpackedSfixed32_; }
     }
@@ -8270,7 +8376,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForSFixed64(793);
     private readonly pbc::RepeatedField<long> unpackedSfixed64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> UnpackedSfixed64 {
       get { return unpackedSfixed64_; }
     }
@@ -8281,7 +8387,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForFloat(805);
     private readonly pbc::RepeatedField<float> unpackedFloat_ = new pbc::RepeatedField<float>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<float> UnpackedFloat {
       get { return unpackedFloat_; }
     }
@@ -8292,7 +8398,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForDouble(809);
     private readonly pbc::RepeatedField<double> unpackedDouble_ = new pbc::RepeatedField<double>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<double> UnpackedDouble {
       get { return unpackedDouble_; }
     }
@@ -8303,7 +8409,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForBool(816);
     private readonly pbc::RepeatedField<bool> unpackedBool_ = new pbc::RepeatedField<bool>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<bool> UnpackedBool {
       get { return unpackedBool_; }
     }
@@ -8314,19 +8420,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForEnum(824, x => (int) x, x => (global::Google.Protobuf.TestProtos.ForeignEnum) x);
     private readonly pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> unpackedEnum_ = new pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.TestProtos.ForeignEnum> UnpackedEnum {
       get { return unpackedEnum_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestUnpackedTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestUnpackedTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8352,7 +8458,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= unpackedInt32_.GetHashCode();
@@ -8376,13 +8482,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8409,7 +8515,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       unpackedInt32_.WriteTo(ref output, _repeated_unpackedInt32_codec);
       unpackedInt64_.WriteTo(ref output, _repeated_unpackedInt64_codec);
@@ -8432,7 +8538,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += unpackedInt32_.CalculateSize(_repeated_unpackedInt32_codec);
@@ -8456,7 +8562,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestUnpackedTypes other) {
       if (other == null) {
         return;
@@ -8479,7 +8585,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8567,7 +8673,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8657,34 +8763,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestRepeatedScalarDifferentTagSizes> _parser = new pb::MessageParser<TestRepeatedScalarDifferentTagSizes>(() => new TestRepeatedScalarDifferentTagSizes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestRepeatedScalarDifferentTagSizes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRepeatedScalarDifferentTagSizes() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRepeatedScalarDifferentTagSizes(TestRepeatedScalarDifferentTagSizes other) : this() {
       repeatedFixed32_ = other.repeatedFixed32_.Clone();
       repeatedInt32_ = other.repeatedInt32_.Clone();
@@ -8696,7 +8805,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestRepeatedScalarDifferentTagSizes Clone() {
       return new TestRepeatedScalarDifferentTagSizes(this);
     }
@@ -8712,7 +8821,7 @@ namespace Google.Protobuf.TestProtos {
     /// in TestAllTypes didn't trigger the check.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint> RepeatedFixed32 {
       get { return repeatedFixed32_; }
     }
@@ -8726,7 +8835,7 @@ namespace Google.Protobuf.TestProtos {
     /// Check for a varint type, just for good measure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<int> RepeatedInt32 {
       get { return repeatedInt32_; }
     }
@@ -8740,7 +8849,7 @@ namespace Google.Protobuf.TestProtos {
     /// These have two-byte tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> RepeatedFixed64 {
       get { return repeatedFixed64_; }
     }
@@ -8751,7 +8860,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForInt64(16378);
     private readonly pbc::RepeatedField<long> repeatedInt64_ = new pbc::RepeatedField<long>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<long> RepeatedInt64 {
       get { return repeatedInt64_; }
     }
@@ -8765,7 +8874,7 @@ namespace Google.Protobuf.TestProtos {
     /// Three byte tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<float> RepeatedFloat {
       get { return repeatedFloat_; }
     }
@@ -8776,19 +8885,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForUInt64(2097146);
     private readonly pbc::RepeatedField<ulong> repeatedUint64_ = new pbc::RepeatedField<ulong>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong> RepeatedUint64 {
       get { return repeatedUint64_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestRepeatedScalarDifferentTagSizes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestRepeatedScalarDifferentTagSizes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8806,7 +8915,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= repeatedFixed32_.GetHashCode();
@@ -8822,13 +8931,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8847,7 +8956,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       repeatedFixed32_.WriteTo(ref output, _repeated_repeatedFixed32_codec);
       repeatedInt32_.WriteTo(ref output, _repeated_repeatedInt32_codec);
@@ -8862,7 +8971,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += repeatedFixed32_.CalculateSize(_repeated_repeatedFixed32_codec);
@@ -8878,7 +8987,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestRepeatedScalarDifferentTagSizes other) {
       if (other == null) {
         return;
@@ -8893,7 +9002,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8941,7 +9050,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8991,41 +9100,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestCommentInjectionMessage> _parser = new pb::MessageParser<TestCommentInjectionMessage>(() => new TestCommentInjectionMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestCommentInjectionMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCommentInjectionMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCommentInjectionMessage(TestCommentInjectionMessage other) : this() {
       a_ = other.a_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestCommentInjectionMessage Clone() {
       return new TestCommentInjectionMessage(this);
     }
@@ -9037,7 +9149,7 @@ namespace Google.Protobuf.TestProtos {
     /// */ &lt;- This should not close the generated doc comment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string A {
       get { return a_; }
       set {
@@ -9046,13 +9158,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestCommentInjectionMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestCommentInjectionMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9065,7 +9177,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (A.Length != 0) hash ^= A.GetHashCode();
@@ -9076,13 +9188,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9099,7 +9211,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (A.Length != 0) {
         output.WriteRawTag(10);
@@ -9112,7 +9224,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (A.Length != 0) {
@@ -9125,7 +9237,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestCommentInjectionMessage other) {
       if (other == null) {
         return;
@@ -9137,7 +9249,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9159,7 +9271,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9186,52 +9298,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<FooRequest> _parser = new pb::MessageParser<FooRequest>(() => new FooRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<FooRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooRequest() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooRequest(FooRequest other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooRequest Clone() {
       return new FooRequest(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as FooRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(FooRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9243,7 +9358,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -9253,13 +9368,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9272,7 +9387,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9281,7 +9396,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -9291,7 +9406,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(FooRequest other) {
       if (other == null) {
         return;
@@ -9300,7 +9415,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9318,7 +9433,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9338,52 +9453,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<FooResponse> _parser = new pb::MessageParser<FooResponse>(() => new FooResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<FooResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooResponse() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooResponse(FooResponse other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooResponse Clone() {
       return new FooResponse(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as FooResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(FooResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9395,7 +9513,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -9405,13 +9523,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9424,7 +9542,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9433,7 +9551,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -9443,7 +9561,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(FooResponse other) {
       if (other == null) {
         return;
@@ -9452,7 +9570,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9470,7 +9588,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9490,52 +9608,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<FooClientMessage> _parser = new pb::MessageParser<FooClientMessage>(() => new FooClientMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<FooClientMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooClientMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooClientMessage(FooClientMessage other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooClientMessage Clone() {
       return new FooClientMessage(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as FooClientMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(FooClientMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9547,7 +9668,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -9557,13 +9678,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9576,7 +9697,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9585,7 +9706,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -9595,7 +9716,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(FooClientMessage other) {
       if (other == null) {
         return;
@@ -9604,7 +9725,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9622,7 +9743,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9642,52 +9763,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<FooServerMessage> _parser = new pb::MessageParser<FooServerMessage>(() => new FooServerMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<FooServerMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooServerMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooServerMessage(FooServerMessage other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public FooServerMessage Clone() {
       return new FooServerMessage(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as FooServerMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(FooServerMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9699,7 +9823,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -9709,13 +9833,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9728,7 +9852,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9737,7 +9861,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -9747,7 +9871,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(FooServerMessage other) {
       if (other == null) {
         return;
@@ -9756,7 +9880,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9774,7 +9898,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9794,52 +9918,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<BarRequest> _parser = new pb::MessageParser<BarRequest>(() => new BarRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<BarRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarRequest() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarRequest(BarRequest other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarRequest Clone() {
       return new BarRequest(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as BarRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(BarRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9851,7 +9978,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -9861,13 +9988,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9880,7 +10007,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9889,7 +10016,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -9899,7 +10026,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(BarRequest other) {
       if (other == null) {
         return;
@@ -9908,7 +10035,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9926,7 +10053,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9946,52 +10073,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<BarResponse> _parser = new pb::MessageParser<BarResponse>(() => new BarResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<BarResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarResponse() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarResponse(BarResponse other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public BarResponse Clone() {
       return new BarResponse(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as BarResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(BarResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10003,7 +10133,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -10013,13 +10143,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10032,7 +10162,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10041,7 +10171,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -10051,7 +10181,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(BarResponse other) {
       if (other == null) {
         return;
@@ -10060,7 +10190,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10078,7 +10208,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10098,52 +10228,55 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestEmptyMessage> _parser = new pb::MessageParser<TestEmptyMessage>(() => new TestEmptyMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<TestEmptyMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEmptyMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEmptyMessage(TestEmptyMessage other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public TestEmptyMessage Clone() {
       return new TestEmptyMessage(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestEmptyMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(TestEmptyMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10155,7 +10288,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -10165,13 +10298,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10184,7 +10317,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -10193,7 +10326,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -10203,7 +10336,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(TestEmptyMessage other) {
       if (other == null) {
         return;
@@ -10212,7 +10345,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10230,7 +10363,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10253,41 +10386,44 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<CommentMessage> _parser = new pb::MessageParser<CommentMessage>(() => new CommentMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pb::MessageParser<CommentMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestProto3Reflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public CommentMessage() {
+      global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public CommentMessage(CommentMessage other) : this() {
       text_ = other.text_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public CommentMessage Clone() {
       return new CommentMessage(this);
     }
@@ -10299,7 +10435,7 @@ namespace Google.Protobuf.TestProtos {
     /// Leading field comment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public string Text {
       get { return text_; }
       set {
@@ -10308,13 +10444,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as CommentMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public bool Equals(CommentMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10327,7 +10463,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -10338,13 +10474,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10361,7 +10497,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Text.Length != 0) {
         output.WriteRawTag(10);
@@ -10374,7 +10510,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Text.Length != 0) {
@@ -10387,7 +10523,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(CommentMessage other) {
       if (other == null) {
         return;
@@ -10399,7 +10535,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10421,7 +10557,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10441,7 +10577,7 @@ namespace Google.Protobuf.TestProtos {
     #region Nested types
     /// <summary>Container for nested types declared in the CommentMessage message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
     public static partial class Types {
       /// <summary>
       /// Leading nested enum comment
@@ -10461,41 +10597,44 @@ namespace Google.Protobuf.TestProtos {
           , pb::IBufferMessage
       #endif
       {
+        private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
+
         private static readonly pb::MessageParser<NestedCommentMessage> _parser = new pb::MessageParser<NestedCommentMessage>(() => new NestedCommentMessage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pb::MessageParser<NestedCommentMessage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Protobuf.TestProtos.CommentMessage.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedCommentMessage() {
+          global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ValidateRuntimeVersion();
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedCommentMessage(NestedCommentMessage other) : this() {
           nestedText_ = other.nestedText_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public NestedCommentMessage Clone() {
           return new NestedCommentMessage(this);
         }
@@ -10507,7 +10646,7 @@ namespace Google.Protobuf.TestProtos {
         /// Leading nested message field comment
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public string NestedText {
           get { return nestedText_; }
           set {
@@ -10516,13 +10655,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override bool Equals(object other) {
           return Equals(other as NestedCommentMessage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public bool Equals(NestedCommentMessage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -10535,7 +10674,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override int GetHashCode() {
           int hash = 1;
           if (NestedText.Length != 0) hash ^= NestedText.GetHashCode();
@@ -10546,13 +10685,13 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -10569,7 +10708,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (NestedText.Length != 0) {
             output.WriteRawTag(10);
@@ -10582,7 +10721,7 @@ namespace Google.Protobuf.TestProtos {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public int CalculateSize() {
           int size = 0;
           if (NestedText.Length != 0) {
@@ -10595,7 +10734,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(NestedCommentMessage other) {
           if (other == null) {
             return;
@@ -10607,7 +10746,7 @@ namespace Google.Protobuf.TestProtos {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -10629,7 +10768,7 @@ namespace Google.Protobuf.TestProtos {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestProto3Reflection.ConstProtocVersion)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

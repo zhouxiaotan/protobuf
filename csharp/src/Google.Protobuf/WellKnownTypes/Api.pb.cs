@@ -14,14 +14,36 @@ namespace Google.Protobuf.WellKnownTypes {
   /// <summary>Holder for reflection information generated from google/protobuf/api.proto</summary>
   public static partial class ApiReflection {
 
-    #region Descriptor
-    /// <summary>File descriptor for google/protobuf/api.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
+    internal const string ConstProtocVersion = "3.21.9";
+    /// <summary>Version of protoc used to generate this code.</summary>
+    public static global::System.Version ProtocVersion {
+      get { return protocVersion; }
     }
-    private static pbr::FileDescriptor descriptor;
+    private static readonly global::System.Version protocVersion = new global::System.Version(ConstProtocVersion);
+
+    /// <summary>Minimum version of Google.Protobuf which is compatible with this generated code.</summary>
+    public static global::System.Version MinimumRuntimeVersion {
+      get { return minimumRuntimeVersion; }
+    }
+    private static readonly global::System.Version minimumRuntimeVersion = new global::System.Version(3, 21, 9);
 
     static ApiReflection() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
+    }
+
+    internal static bool ValidateRuntimeVersion() {
+      return true;
+    }
+
+    #region Descriptor
+    private static readonly global::System.Lazy<pbr::FileDescriptor> descriptor = new global::System.Lazy<pbr::FileDescriptor>(CreateFileDescriptor);
+    /// <summary>File descriptor for google/protobuf/api.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor.Value; }
+    }
+
+    private static pbr::FileDescriptor CreateFileDescriptor() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chlnb29nbGUvcHJvdG9idWYvYXBpLnByb3RvEg9nb29nbGUucHJvdG9idWYa",
@@ -41,7 +63,7 @@ namespace Google.Protobuf.WellKnownTypes {
             "Lmdvb2dsZS5wcm90b2J1ZkIIQXBpUHJvdG9QAVosZ29vZ2xlLmdvbGFuZy5v",
             "cmcvcHJvdG9idWYvdHlwZXMva25vd24vYXBpcGKiAgNHUEKqAh5Hb29nbGUu",
             "UHJvdG9idWYuV2VsbEtub3duVHlwZXNiBnByb3RvMw=="));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+      return pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.SourceContextReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.WellKnownTypes.Api), global::Google.Protobuf.WellKnownTypes.Api.Parser, new[]{ "Name", "Methods", "Options", "Version", "SourceContext", "Mixins", "Syntax" }, null, null, null, null),
@@ -69,34 +91,37 @@ namespace Google.Protobuf.WellKnownTypes {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Api> _parser = new pb::MessageParser<Api>(() => new Api());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pb::MessageParser<Api> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Api() {
+      global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Api(Api other) : this() {
       name_ = other.name_;
       methods_ = other.methods_.Clone();
@@ -109,7 +134,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Api Clone() {
       return new Api(this);
     }
@@ -122,7 +147,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// followed by the interface's simple name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string Name {
       get { return name_; }
       set {
@@ -139,7 +164,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The methods of this interface, in unspecified order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Method> Methods {
       get { return methods_; }
     }
@@ -153,7 +178,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// Any metadata attached to the interface.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Option> Options {
       get { return options_; }
     }
@@ -183,7 +208,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// experimental, non-GA interfaces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string Version {
       get { return version_; }
       set {
@@ -199,7 +224,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.SourceContext SourceContext {
       get { return sourceContext_; }
       set {
@@ -216,7 +241,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// Included interfaces. See [Mixin][].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Mixin> Mixins {
       get { return mixins_; }
     }
@@ -228,7 +253,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The source syntax of the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Syntax Syntax {
       get { return syntax_; }
       set {
@@ -237,13 +262,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Api);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public bool Equals(Api other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -262,7 +287,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -279,13 +304,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -317,7 +342,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -345,7 +370,7 @@ namespace Google.Protobuf.WellKnownTypes {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -370,7 +395,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(Api other) {
       if (other == null) {
         return;
@@ -397,7 +422,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -446,7 +471,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -500,34 +525,37 @@ namespace Google.Protobuf.WellKnownTypes {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Method> _parser = new pb::MessageParser<Method>(() => new Method());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pb::MessageParser<Method> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Method() {
+      global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Method(Method other) : this() {
       name_ = other.name_;
       requestTypeUrl_ = other.requestTypeUrl_;
@@ -540,7 +568,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Method Clone() {
       return new Method(this);
     }
@@ -552,7 +580,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The simple name of this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string Name {
       get { return name_; }
       set {
@@ -567,7 +595,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// A URL of the input message type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string RequestTypeUrl {
       get { return requestTypeUrl_; }
       set {
@@ -582,7 +610,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// If true, the request is streamed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public bool RequestStreaming {
       get { return requestStreaming_; }
       set {
@@ -597,7 +625,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The URL of the output message type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string ResponseTypeUrl {
       get { return responseTypeUrl_; }
       set {
@@ -612,7 +640,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// If true, the response is streamed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public bool ResponseStreaming {
       get { return responseStreaming_; }
       set {
@@ -629,7 +657,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// Any metadata attached to the method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Option> Options {
       get { return options_; }
     }
@@ -641,7 +669,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The source syntax of this method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Syntax Syntax {
       get { return syntax_; }
       set {
@@ -650,13 +678,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Method);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public bool Equals(Method other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -675,7 +703,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -692,13 +720,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -736,7 +764,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -770,7 +798,7 @@ namespace Google.Protobuf.WellKnownTypes {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -799,7 +827,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(Method other) {
       if (other == null) {
         return;
@@ -827,7 +855,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -873,7 +901,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1001,34 +1029,37 @@ namespace Google.Protobuf.WellKnownTypes {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<Mixin> _parser = new pb::MessageParser<Mixin>(() => new Mixin());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pb::MessageParser<Mixin> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Mixin() {
+      global::Google.Protobuf.WellKnownTypes.ApiReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Mixin(Mixin other) : this() {
       name_ = other.name_;
       root_ = other.root_;
@@ -1036,7 +1067,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public Mixin Clone() {
       return new Mixin(this);
     }
@@ -1048,7 +1079,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// The fully qualified name of the interface which is included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string Name {
       get { return name_; }
       set {
@@ -1064,7 +1095,7 @@ namespace Google.Protobuf.WellKnownTypes {
     /// are rooted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public string Root {
       get { return root_; }
       set {
@@ -1073,13 +1104,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as Mixin);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public bool Equals(Mixin other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1093,7 +1124,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1105,13 +1136,13 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1132,7 +1163,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1149,7 +1180,7 @@ namespace Google.Protobuf.WellKnownTypes {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1165,7 +1196,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(Mixin other) {
       if (other == null) {
         return;
@@ -1180,7 +1211,7 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1206,7 +1237,7 @@ namespace Google.Protobuf.WellKnownTypes {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.WellKnownTypes.ApiReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

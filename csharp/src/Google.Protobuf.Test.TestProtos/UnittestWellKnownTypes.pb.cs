@@ -14,14 +14,36 @@ namespace Google.Protobuf.TestProtos {
   /// <summary>Holder for reflection information generated from google/protobuf/unittest_well_known_types.proto</summary>
   public static partial class UnittestWellKnownTypesReflection {
 
-    #region Descriptor
-    /// <summary>File descriptor for google/protobuf/unittest_well_known_types.proto</summary>
-    public static pbr::FileDescriptor Descriptor {
-      get { return descriptor; }
+    internal const string ConstProtocVersion = "3.21.9";
+    /// <summary>Version of protoc used to generate this code.</summary>
+    public static global::System.Version ProtocVersion {
+      get { return protocVersion; }
     }
-    private static pbr::FileDescriptor descriptor;
+    private static readonly global::System.Version protocVersion = new global::System.Version(ConstProtocVersion);
+
+    /// <summary>Minimum version of Google.Protobuf which is compatible with this generated code.</summary>
+    public static global::System.Version MinimumRuntimeVersion {
+      get { return minimumRuntimeVersion; }
+    }
+    private static readonly global::System.Version minimumRuntimeVersion = new global::System.Version(3, 21, 9);
 
     static UnittestWellKnownTypesReflection() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
+    }
+
+    internal static bool ValidateRuntimeVersion() {
+      return true;
+    }
+
+    #region Descriptor
+    private static readonly global::System.Lazy<pbr::FileDescriptor> descriptor = new global::System.Lazy<pbr::FileDescriptor>(CreateFileDescriptor);
+    /// <summary>File descriptor for google/protobuf/unittest_well_known_types.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor.Value; }
+    }
+
+    private static pbr::FileDescriptor CreateFileDescriptor() {
+      pbr::RuntimeVersion.Validate(MinimumRuntimeVersion);
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvcHJvdG9idWYvdW5pdHRlc3Rfd2VsbF9rbm93bl90eXBlcy5w",
@@ -161,7 +183,7 @@ namespace Google.Protobuf.TestProtos {
             "AiABKAsyGy5nb29nbGUucHJvdG9idWYuQnl0ZXNWYWx1ZToCOAFCOQoYY29t",
             "Lmdvb2dsZS5wcm90b2J1Zi50ZXN0UAGqAhpHb29nbGUuUHJvdG9idWYuVGVz",
             "dFByb3Rvc2IGcHJvdG8z"));
-      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+      return pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.ApiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.SourceContextReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.TestProtos.TestWellKnownTypes), global::Google.Protobuf.TestProtos.TestWellKnownTypes.Parser, new[]{ "AnyField", "ApiField", "DurationField", "EmptyField", "FieldMaskField", "SourceContextField", "StructField", "TimestampField", "TypeField", "DoubleField", "FloatField", "Int64Field", "Uint64Field", "Int32Field", "Uint32Field", "BoolField", "StringField", "BytesField", "ValueField" }, null, null, null, null),
@@ -184,34 +206,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<TestWellKnownTypes> _parser = new pb::MessageParser<TestWellKnownTypes>(() => new TestWellKnownTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pb::MessageParser<TestWellKnownTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public TestWellKnownTypes() {
+      global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public TestWellKnownTypes(TestWellKnownTypes other) : this() {
       anyField_ = other.anyField_ != null ? other.anyField_.Clone() : null;
       apiField_ = other.apiField_ != null ? other.apiField_.Clone() : null;
@@ -236,7 +261,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public TestWellKnownTypes Clone() {
       return new TestWellKnownTypes(this);
     }
@@ -245,7 +270,7 @@ namespace Google.Protobuf.TestProtos {
     public const int AnyFieldFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Any anyField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Any AnyField {
       get { return anyField_; }
       set {
@@ -257,7 +282,7 @@ namespace Google.Protobuf.TestProtos {
     public const int ApiFieldFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Api apiField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Api ApiField {
       get { return apiField_; }
       set {
@@ -269,7 +294,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DurationFieldFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Duration durationField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Duration DurationField {
       get { return durationField_; }
       set {
@@ -281,7 +306,7 @@ namespace Google.Protobuf.TestProtos {
     public const int EmptyFieldFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Empty emptyField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Empty EmptyField {
       get { return emptyField_; }
       set {
@@ -293,7 +318,7 @@ namespace Google.Protobuf.TestProtos {
     public const int FieldMaskFieldFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMaskField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMaskField {
       get { return fieldMaskField_; }
       set {
@@ -305,7 +330,7 @@ namespace Google.Protobuf.TestProtos {
     public const int SourceContextFieldFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.SourceContext sourceContextField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.SourceContext SourceContextField {
       get { return sourceContextField_; }
       set {
@@ -317,7 +342,7 @@ namespace Google.Protobuf.TestProtos {
     public const int StructFieldFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Struct structField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Struct StructField {
       get { return structField_; }
       set {
@@ -329,7 +354,7 @@ namespace Google.Protobuf.TestProtos {
     public const int TimestampFieldFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp timestampField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimestampField {
       get { return timestampField_; }
       set {
@@ -341,7 +366,7 @@ namespace Google.Protobuf.TestProtos {
     public const int TypeFieldFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Type typeField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Type TypeField {
       get { return typeField_; }
       set {
@@ -354,7 +379,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<double?> _single_doubleField_codec = pb::FieldCodec.ForStructWrapper<double>(82);
     private double? doubleField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public double? DoubleField {
       get { return doubleField_; }
       set {
@@ -368,7 +393,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<float?> _single_floatField_codec = pb::FieldCodec.ForStructWrapper<float>(90);
     private float? floatField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public float? FloatField {
       get { return floatField_; }
       set {
@@ -382,7 +407,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<long?> _single_int64Field_codec = pb::FieldCodec.ForStructWrapper<long>(98);
     private long? int64Field_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public long? Int64Field {
       get { return int64Field_; }
       set {
@@ -396,7 +421,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<ulong?> _single_uint64Field_codec = pb::FieldCodec.ForStructWrapper<ulong>(106);
     private ulong? uint64Field_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public ulong? Uint64Field {
       get { return uint64Field_; }
       set {
@@ -410,7 +435,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<int?> _single_int32Field_codec = pb::FieldCodec.ForStructWrapper<int>(114);
     private int? int32Field_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int? Int32Field {
       get { return int32Field_; }
       set {
@@ -424,7 +449,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<uint?> _single_uint32Field_codec = pb::FieldCodec.ForStructWrapper<uint>(122);
     private uint? uint32Field_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public uint? Uint32Field {
       get { return uint32Field_; }
       set {
@@ -438,7 +463,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<bool?> _single_boolField_codec = pb::FieldCodec.ForStructWrapper<bool>(130);
     private bool? boolField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool? BoolField {
       get { return boolField_; }
       set {
@@ -452,7 +477,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<string> _single_stringField_codec = pb::FieldCodec.ForClassWrapper<string>(138);
     private string stringField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public string StringField {
       get { return stringField_; }
       set {
@@ -466,7 +491,7 @@ namespace Google.Protobuf.TestProtos {
     private static readonly pb::FieldCodec<pb::ByteString> _single_bytesField_codec = pb::FieldCodec.ForClassWrapper<pb::ByteString>(146);
     private pb::ByteString bytesField_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pb::ByteString BytesField {
       get { return bytesField_; }
       set {
@@ -482,7 +507,7 @@ namespace Google.Protobuf.TestProtos {
     /// Part of struct, but useful to be able to test separately
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Value ValueField {
       get { return valueField_; }
       set {
@@ -491,13 +516,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as TestWellKnownTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool Equals(TestWellKnownTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -528,7 +553,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (anyField_ != null) hash ^= AnyField.GetHashCode();
@@ -557,13 +582,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -643,7 +668,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (anyField_ != null) {
         output.WriteRawTag(10);
@@ -719,7 +744,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (anyField_ != null) {
@@ -786,7 +811,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(TestWellKnownTypes other) {
       if (other == null) {
         return;
@@ -900,7 +925,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1051,7 +1076,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1207,34 +1232,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<RepeatedWellKnownTypes> _parser = new pb::MessageParser<RepeatedWellKnownTypes>(() => new RepeatedWellKnownTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pb::MessageParser<RepeatedWellKnownTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public RepeatedWellKnownTypes() {
+      global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public RepeatedWellKnownTypes(RepeatedWellKnownTypes other) : this() {
       anyField_ = other.anyField_.Clone();
       apiField_ = other.apiField_.Clone();
@@ -1258,7 +1286,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public RepeatedWellKnownTypes Clone() {
       return new RepeatedWellKnownTypes(this);
     }
@@ -1269,7 +1297,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(10, global::Google.Protobuf.WellKnownTypes.Any.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> anyField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> AnyField {
       get { return anyField_; }
     }
@@ -1280,7 +1308,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Api.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Api> apiField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Api>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Api> ApiField {
       get { return apiField_; }
     }
@@ -1291,7 +1319,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(26, global::Google.Protobuf.WellKnownTypes.Duration.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> durationField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Duration> DurationField {
       get { return durationField_; }
     }
@@ -1302,7 +1330,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(34, global::Google.Protobuf.WellKnownTypes.Empty.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Empty> emptyField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Empty>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Empty> EmptyField {
       get { return emptyField_; }
     }
@@ -1313,7 +1341,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(42, global::Google.Protobuf.WellKnownTypes.FieldMask.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.FieldMask> fieldMaskField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.FieldMask>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.FieldMask> FieldMaskField {
       get { return fieldMaskField_; }
     }
@@ -1324,7 +1352,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(50, global::Google.Protobuf.WellKnownTypes.SourceContext.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.SourceContext> sourceContextField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.SourceContext>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.SourceContext> SourceContextField {
       get { return sourceContextField_; }
     }
@@ -1335,7 +1363,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(58, global::Google.Protobuf.WellKnownTypes.Struct.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct> structField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Struct> StructField {
       get { return structField_; }
     }
@@ -1346,7 +1374,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(66, global::Google.Protobuf.WellKnownTypes.Timestamp.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp> timestampField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Timestamp> TimestampField {
       get { return timestampField_; }
     }
@@ -1357,7 +1385,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForMessage(74, global::Google.Protobuf.WellKnownTypes.Type.Parser);
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Type> typeField_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Type>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Type> TypeField {
       get { return typeField_; }
     }
@@ -1371,7 +1399,7 @@ namespace Google.Protobuf.TestProtos {
     /// These don't actually make a lot of sense, but they're not prohibited...
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<double?> DoubleField {
       get { return doubleField_; }
     }
@@ -1382,7 +1410,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<float>(90);
     private readonly pbc::RepeatedField<float?> floatField_ = new pbc::RepeatedField<float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<float?> FloatField {
       get { return floatField_; }
     }
@@ -1393,7 +1421,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<long>(98);
     private readonly pbc::RepeatedField<long?> int64Field_ = new pbc::RepeatedField<long?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<long?> Int64Field {
       get { return int64Field_; }
     }
@@ -1404,7 +1432,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<ulong>(106);
     private readonly pbc::RepeatedField<ulong?> uint64Field_ = new pbc::RepeatedField<ulong?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<ulong?> Uint64Field {
       get { return uint64Field_; }
     }
@@ -1415,7 +1443,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<int>(114);
     private readonly pbc::RepeatedField<int?> int32Field_ = new pbc::RepeatedField<int?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<int?> Int32Field {
       get { return int32Field_; }
     }
@@ -1426,7 +1454,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<uint>(122);
     private readonly pbc::RepeatedField<uint?> uint32Field_ = new pbc::RepeatedField<uint?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<uint?> Uint32Field {
       get { return uint32Field_; }
     }
@@ -1437,7 +1465,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForStructWrapper<bool>(130);
     private readonly pbc::RepeatedField<bool?> boolField_ = new pbc::RepeatedField<bool?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<bool?> BoolField {
       get { return boolField_; }
     }
@@ -1448,7 +1476,7 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForClassWrapper<string>(138);
     private readonly pbc::RepeatedField<string> stringField_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<string> StringField {
       get { return stringField_; }
     }
@@ -1459,19 +1487,19 @@ namespace Google.Protobuf.TestProtos {
         = pb::FieldCodec.ForClassWrapper<pb::ByteString>(146);
     private readonly pbc::RepeatedField<pb::ByteString> bytesField_ = new pbc::RepeatedField<pb::ByteString>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::RepeatedField<pb::ByteString> BytesField {
       get { return bytesField_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as RepeatedWellKnownTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool Equals(RepeatedWellKnownTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1501,7 +1529,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= anyField_.GetHashCode();
@@ -1529,13 +1557,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1566,7 +1594,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       anyField_.WriteTo(ref output, _repeated_anyField_codec);
       apiField_.WriteTo(ref output, _repeated_apiField_codec);
@@ -1593,7 +1621,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += anyField_.CalculateSize(_repeated_anyField_codec);
@@ -1621,7 +1649,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(RepeatedWellKnownTypes other) {
       if (other == null) {
         return;
@@ -1648,7 +1676,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1738,7 +1766,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1830,34 +1858,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<OneofWellKnownTypes> _parser = new pb::MessageParser<OneofWellKnownTypes>(() => new OneofWellKnownTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pb::MessageParser<OneofWellKnownTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public OneofWellKnownTypes() {
+      global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public OneofWellKnownTypes(OneofWellKnownTypes other) : this() {
       switch (other.OneofFieldCase) {
         case OneofFieldOneofCase.AnyField:
@@ -1920,7 +1951,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public OneofWellKnownTypes Clone() {
       return new OneofWellKnownTypes(this);
     }
@@ -1928,7 +1959,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "any_field" field.</summary>
     public const int AnyFieldFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Any AnyField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.AnyField ? (global::Google.Protobuf.WellKnownTypes.Any) oneofField_ : null; }
       set {
@@ -1940,7 +1971,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "api_field" field.</summary>
     public const int ApiFieldFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Api ApiField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.ApiField ? (global::Google.Protobuf.WellKnownTypes.Api) oneofField_ : null; }
       set {
@@ -1952,7 +1983,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "duration_field" field.</summary>
     public const int DurationFieldFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Duration DurationField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.DurationField ? (global::Google.Protobuf.WellKnownTypes.Duration) oneofField_ : null; }
       set {
@@ -1964,7 +1995,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "empty_field" field.</summary>
     public const int EmptyFieldFieldNumber = 4;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Empty EmptyField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.EmptyField ? (global::Google.Protobuf.WellKnownTypes.Empty) oneofField_ : null; }
       set {
@@ -1976,7 +2007,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "field_mask_field" field.</summary>
     public const int FieldMaskFieldFieldNumber = 5;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMaskField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.FieldMaskField ? (global::Google.Protobuf.WellKnownTypes.FieldMask) oneofField_ : null; }
       set {
@@ -1988,7 +2019,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "source_context_field" field.</summary>
     public const int SourceContextFieldFieldNumber = 6;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.SourceContext SourceContextField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.SourceContextField ? (global::Google.Protobuf.WellKnownTypes.SourceContext) oneofField_ : null; }
       set {
@@ -2000,7 +2031,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "struct_field" field.</summary>
     public const int StructFieldFieldNumber = 7;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Struct StructField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.StructField ? (global::Google.Protobuf.WellKnownTypes.Struct) oneofField_ : null; }
       set {
@@ -2012,7 +2043,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "timestamp_field" field.</summary>
     public const int TimestampFieldFieldNumber = 8;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp TimestampField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.TimestampField ? (global::Google.Protobuf.WellKnownTypes.Timestamp) oneofField_ : null; }
       set {
@@ -2024,7 +2055,7 @@ namespace Google.Protobuf.TestProtos {
     /// <summary>Field number for the "type_field" field.</summary>
     public const int TypeFieldFieldNumber = 9;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public global::Google.Protobuf.WellKnownTypes.Type TypeField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.TypeField ? (global::Google.Protobuf.WellKnownTypes.Type) oneofField_ : null; }
       set {
@@ -2037,7 +2068,7 @@ namespace Google.Protobuf.TestProtos {
     public const int DoubleFieldFieldNumber = 10;
     private static readonly pb::FieldCodec<double?> _oneof_doubleField_codec = pb::FieldCodec.ForStructWrapper<double>(82);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public double? DoubleField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.DoubleField ? (double?) oneofField_ : (double?) null; }
       set {
@@ -2050,7 +2081,7 @@ namespace Google.Protobuf.TestProtos {
     public const int FloatFieldFieldNumber = 11;
     private static readonly pb::FieldCodec<float?> _oneof_floatField_codec = pb::FieldCodec.ForStructWrapper<float>(90);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public float? FloatField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.FloatField ? (float?) oneofField_ : (float?) null; }
       set {
@@ -2063,7 +2094,7 @@ namespace Google.Protobuf.TestProtos {
     public const int Int64FieldFieldNumber = 12;
     private static readonly pb::FieldCodec<long?> _oneof_int64Field_codec = pb::FieldCodec.ForStructWrapper<long>(98);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public long? Int64Field {
       get { return oneofFieldCase_ == OneofFieldOneofCase.Int64Field ? (long?) oneofField_ : (long?) null; }
       set {
@@ -2076,7 +2107,7 @@ namespace Google.Protobuf.TestProtos {
     public const int Uint64FieldFieldNumber = 13;
     private static readonly pb::FieldCodec<ulong?> _oneof_uint64Field_codec = pb::FieldCodec.ForStructWrapper<ulong>(106);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public ulong? Uint64Field {
       get { return oneofFieldCase_ == OneofFieldOneofCase.Uint64Field ? (ulong?) oneofField_ : (ulong?) null; }
       set {
@@ -2089,7 +2120,7 @@ namespace Google.Protobuf.TestProtos {
     public const int Int32FieldFieldNumber = 14;
     private static readonly pb::FieldCodec<int?> _oneof_int32Field_codec = pb::FieldCodec.ForStructWrapper<int>(114);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int? Int32Field {
       get { return oneofFieldCase_ == OneofFieldOneofCase.Int32Field ? (int?) oneofField_ : (int?) null; }
       set {
@@ -2102,7 +2133,7 @@ namespace Google.Protobuf.TestProtos {
     public const int Uint32FieldFieldNumber = 15;
     private static readonly pb::FieldCodec<uint?> _oneof_uint32Field_codec = pb::FieldCodec.ForStructWrapper<uint>(122);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public uint? Uint32Field {
       get { return oneofFieldCase_ == OneofFieldOneofCase.Uint32Field ? (uint?) oneofField_ : (uint?) null; }
       set {
@@ -2115,7 +2146,7 @@ namespace Google.Protobuf.TestProtos {
     public const int BoolFieldFieldNumber = 16;
     private static readonly pb::FieldCodec<bool?> _oneof_boolField_codec = pb::FieldCodec.ForStructWrapper<bool>(130);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool? BoolField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.BoolField ? (bool?) oneofField_ : (bool?) null; }
       set {
@@ -2128,7 +2159,7 @@ namespace Google.Protobuf.TestProtos {
     public const int StringFieldFieldNumber = 17;
     private static readonly pb::FieldCodec<string> _oneof_stringField_codec = pb::FieldCodec.ForClassWrapper<string>(138);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public string StringField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.StringField ? (string) oneofField_ : (string) null; }
       set {
@@ -2141,7 +2172,7 @@ namespace Google.Protobuf.TestProtos {
     public const int BytesFieldFieldNumber = 18;
     private static readonly pb::FieldCodec<pb::ByteString> _oneof_bytesField_codec = pb::FieldCodec.ForClassWrapper<pb::ByteString>(146);
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pb::ByteString BytesField {
       get { return oneofFieldCase_ == OneofFieldOneofCase.BytesField ? (pb::ByteString) oneofField_ : (pb::ByteString) null; }
       set {
@@ -2175,26 +2206,26 @@ namespace Google.Protobuf.TestProtos {
     }
     private OneofFieldOneofCase oneofFieldCase_ = OneofFieldOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public OneofFieldOneofCase OneofFieldCase {
       get { return oneofFieldCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void ClearOneofField() {
       oneofFieldCase_ = OneofFieldOneofCase.None;
       oneofField_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as OneofWellKnownTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool Equals(OneofWellKnownTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2225,7 +2256,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       if (oneofFieldCase_ == OneofFieldOneofCase.AnyField) hash ^= AnyField.GetHashCode();
@@ -2254,13 +2285,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2336,7 +2367,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (oneofFieldCase_ == OneofFieldOneofCase.AnyField) {
         output.WriteRawTag(10);
@@ -2408,7 +2439,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       if (oneofFieldCase_ == OneofFieldOneofCase.AnyField) {
@@ -2472,7 +2503,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(OneofWellKnownTypes other) {
       if (other == null) {
         return;
@@ -2565,7 +2596,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2700,7 +2731,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2842,34 +2873,37 @@ namespace Google.Protobuf.TestProtos {
       , pb::IBufferMessage
   #endif
   {
+    private static readonly bool _runtimeVersionValidated = global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
+
     private static readonly pb::MessageParser<MapWellKnownTypes> _parser = new pb::MessageParser<MapWellKnownTypes>(() => new MapWellKnownTypes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pb::MessageParser<MapWellKnownTypes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public MapWellKnownTypes() {
+      global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ValidateRuntimeVersion();
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public MapWellKnownTypes(MapWellKnownTypes other) : this() {
       anyField_ = other.anyField_.Clone();
       apiField_ = other.apiField_.Clone();
@@ -2893,7 +2927,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public MapWellKnownTypes Clone() {
       return new MapWellKnownTypes(this);
     }
@@ -2904,7 +2938,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Any>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Any.Parser), 10);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Any> anyField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Any>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Any> AnyField {
       get { return anyField_; }
     }
@@ -2915,7 +2949,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Api>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Api.Parser), 18);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Api> apiField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Api>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Api> ApiField {
       get { return apiField_; }
     }
@@ -2926,7 +2960,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Duration>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Duration.Parser), 26);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Duration> durationField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Duration>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Duration> DurationField {
       get { return durationField_; }
     }
@@ -2937,7 +2971,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Empty>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Empty.Parser), 34);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Empty> emptyField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Empty>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Empty> EmptyField {
       get { return emptyField_; }
     }
@@ -2948,7 +2982,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.FieldMask>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.FieldMask.Parser), 42);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.FieldMask> fieldMaskField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.FieldMask>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.FieldMask> FieldMaskField {
       get { return fieldMaskField_; }
     }
@@ -2959,7 +2993,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.SourceContext>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.SourceContext.Parser), 50);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.SourceContext> sourceContextField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.SourceContext>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.SourceContext> SourceContextField {
       get { return sourceContextField_; }
     }
@@ -2970,7 +3004,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Struct>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Struct.Parser), 58);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Struct> structField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Struct>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Struct> StructField {
       get { return structField_; }
     }
@@ -2981,7 +3015,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Timestamp>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Timestamp.Parser), 66);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Timestamp> timestampField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Timestamp>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Timestamp> TimestampField {
       get { return timestampField_; }
     }
@@ -2992,7 +3026,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Type>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForMessage(18, global::Google.Protobuf.WellKnownTypes.Type.Parser), 74);
     private readonly pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Type> typeField_ = new pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Type>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, global::Google.Protobuf.WellKnownTypes.Type> TypeField {
       get { return typeField_; }
     }
@@ -3003,7 +3037,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, double?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<double>(18), 82);
     private readonly pbc::MapField<int, double?> doubleField_ = new pbc::MapField<int, double?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, double?> DoubleField {
       get { return doubleField_; }
     }
@@ -3014,7 +3048,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, float?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<float>(18), 90);
     private readonly pbc::MapField<int, float?> floatField_ = new pbc::MapField<int, float?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, float?> FloatField {
       get { return floatField_; }
     }
@@ -3025,7 +3059,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, long?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<long>(18), 98);
     private readonly pbc::MapField<int, long?> int64Field_ = new pbc::MapField<int, long?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, long?> Int64Field {
       get { return int64Field_; }
     }
@@ -3036,7 +3070,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, ulong?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<ulong>(18), 106);
     private readonly pbc::MapField<int, ulong?> uint64Field_ = new pbc::MapField<int, ulong?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, ulong?> Uint64Field {
       get { return uint64Field_; }
     }
@@ -3047,7 +3081,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, int?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<int>(18), 114);
     private readonly pbc::MapField<int, int?> int32Field_ = new pbc::MapField<int, int?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, int?> Int32Field {
       get { return int32Field_; }
     }
@@ -3058,7 +3092,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, uint?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<uint>(18), 122);
     private readonly pbc::MapField<int, uint?> uint32Field_ = new pbc::MapField<int, uint?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, uint?> Uint32Field {
       get { return uint32Field_; }
     }
@@ -3069,7 +3103,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, bool?>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForStructWrapper<bool>(18), 130);
     private readonly pbc::MapField<int, bool?> boolField_ = new pbc::MapField<int, bool?>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, bool?> BoolField {
       get { return boolField_; }
     }
@@ -3080,7 +3114,7 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, string>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForClassWrapper<string>(18), 138);
     private readonly pbc::MapField<int, string> stringField_ = new pbc::MapField<int, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, string> StringField {
       get { return stringField_; }
     }
@@ -3091,19 +3125,19 @@ namespace Google.Protobuf.TestProtos {
         = new pbc::MapField<int, pb::ByteString>.Codec(pb::FieldCodec.ForInt32(8, 0), pb::FieldCodec.ForClassWrapper<pb::ByteString>(18), 146);
     private readonly pbc::MapField<int, pb::ByteString> bytesField_ = new pbc::MapField<int, pb::ByteString>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public pbc::MapField<int, pb::ByteString> BytesField {
       get { return bytesField_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override bool Equals(object other) {
       return Equals(other as MapWellKnownTypes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public bool Equals(MapWellKnownTypes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3133,7 +3167,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= AnyField.GetHashCode();
@@ -3161,13 +3195,13 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3198,7 +3232,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       anyField_.WriteTo(ref output, _map_anyField_codec);
       apiField_.WriteTo(ref output, _map_apiField_codec);
@@ -3225,7 +3259,7 @@ namespace Google.Protobuf.TestProtos {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public int CalculateSize() {
       int size = 0;
       size += anyField_.CalculateSize(_map_anyField_codec);
@@ -3253,7 +3287,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(MapWellKnownTypes other) {
       if (other == null) {
         return;
@@ -3280,7 +3314,7 @@ namespace Google.Protobuf.TestProtos {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3370,7 +3404,7 @@ namespace Google.Protobuf.TestProtos {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", global::Google.Protobuf.TestProtos.UnittestWellKnownTypesReflection.ConstProtocVersion)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

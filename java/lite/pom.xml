@@ -4,7 +4,7 @@
   <parent>
     <groupId>com.google.protobuf</groupId>
     <artifactId>protobuf-parent</artifactId>
-    <version>3.21.12</version>
+    <version>4.27.0</version>
   </parent>
 
   <artifactId>protobuf-javalite</artifactId>
@@ -125,6 +125,7 @@
                     <include>Internal.java</include>
                     <include>InvalidProtocolBufferException.java</include>
                     <include>IterableByteBufferInputStream.java</include>
+                    <include>Java8Compatibility.java</include>
                     <include>JavaType.java</include>
                     <include>LazyField.java</include>
                     <include>LazyFieldLite.java</include>
@@ -160,6 +161,7 @@
                     <include>RawMessageInfo.java</include>
                     <include>Reader.java</include>
                     <include>RopeByteString.java</include>
+                    <include>RuntimeVersion.java</include>
                     <include>Schema.java</include>
                     <include>SchemaFactory.java</include>
                     <include>SchemaUtil.java</include>
@@ -222,9 +224,9 @@
                     <exclude>Proto2ExtensionLookupSchemaTest.java</exclude>
                     <exclude>Proto2SchemaTest.java</exclude>
                     <exclude>Proto2UnknownEnumValueTest.java</exclude>
-                    <exclude>RepeatedFieldBuilderV3Test.java</exclude>
+                    <exclude>RepeatedFieldBuilderTest.java</exclude>
                     <exclude>ServiceTest.java</exclude>
-                    <exclude>SingleFieldBuilderV3Test.java</exclude>
+                    <exclude>SingleFieldBuilderTest.java</exclude>
                     <exclude>TestBadIdentifiers.java</exclude>
                     <exclude>TextFormatParseInfoTreeTest.java</exclude>
                     <exclude>TextFormatParseLocationTest.java</exclude>

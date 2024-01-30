@@ -1,32 +1,9 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//     * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//     * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
 
 // Author: dweis@google.com (Daniel Weis)
 //  Based on original Protocol Buffers design by
@@ -34,7 +11,6 @@
 
 #include "google/protobuf/compiler/java/message_builder.h"
 
-#include <algorithm>
 #include <memory>
 #include <vector>
 
@@ -42,7 +18,6 @@
 #include "absl/container/flat_hash_map.h"
 #include "absl/strings/ascii.h"
 #include "absl/strings/str_cat.h"
-#include "absl/strings/substitute.h"
 #include "google/protobuf/compiler/java/context.h"
 #include "google/protobuf/compiler/java/doc_comment.h"
 #include "google/protobuf/compiler/java/enum.h"
@@ -51,7 +26,6 @@
 #include "google/protobuf/compiler/java/helpers.h"
 #include "google/protobuf/compiler/java/name_resolver.h"
 #include "google/protobuf/descriptor.pb.h"
-#include "google/protobuf/io/coded_stream.h"
 #include "google/protobuf/io/printer.h"
 #include "google/protobuf/wire_format.h"
 
@@ -72,6 +46,25 @@ std::string MapValueImmutableClassdName(const Descriptor* descriptor,
   const FieldDescriptor* value_field = descriptor->map_value();
   ABSL_CHECK_EQ(FieldDescriptor::TYPE_MESSAGE, value_field->type());
   return name_resolver->GetImmutableClassName(value_field->message_type());
+}
+
+bool BitfieldTracksMutability(const FieldDescriptor* const descriptor) {
+  if (!descriptor->is_repeated() || IsMapField(descriptor)) {
+    return false;
+  }
+  // TODO: update this to migrate repeated fields to use
+  // ProtobufList (which tracks immutability internally). That allows us to use
+  // the presence bit to skip work on the repeated field if it is not populated.
+  // Once all repeated fields are held in ProtobufLists, this method shouldn't
+  // be needed.
+  switch (descriptor->type()) {
+    case FieldDescriptor::TYPE_GROUP:
+    case FieldDescriptor::TYPE_MESSAGE:
+    case FieldDescriptor::TYPE_ENUM:
+      return true;
+    default:
+      return false;
+  }
 }
 }  // namespace
 
@@ -95,27 +88,25 @@ MessageBuilderGenerator::MessageBuilderGenerator(const Descriptor* descriptor,
 MessageBuilderGenerator::~MessageBuilderGenerator() {}
 
 void MessageBuilderGenerator::Generate(io::Printer* printer) {
-  WriteMessageDocComment(printer, descriptor_);
+  WriteMessageDocComment(printer, descriptor_, context_->options());
   if (descriptor_->extension_range_count() > 0) {
     printer->Print(
         "public static final class Builder extends\n"
-        "    com.google.protobuf.GeneratedMessage$ver$.ExtendableBuilder<\n"
+        "    com.google.protobuf.GeneratedMessage.ExtendableBuilder<\n"
         "      $classname$, Builder> implements\n"
         "    $extra_interfaces$\n"
         "    $classname$OrBuilder {\n",
         "classname", name_resolver_->GetImmutableClassName(descriptor_),
-        "extra_interfaces", ExtraBuilderInterfaces(descriptor_), "ver",
-        GeneratedCodeVersionSuffix());
+        "extra_interfaces", ExtraBuilderInterfaces(descriptor_));
   } else {
     printer->Print(
         "public static final class Builder extends\n"
-        "    com.google.protobuf.GeneratedMessage$ver$.Builder<Builder> "
+        "    com.google.protobuf.GeneratedMessage.Builder<Builder> "
         "implements\n"
         "    $extra_interfaces$\n"
         "    $classname$OrBuilder {\n",
         "classname", name_resolver_->GetImmutableClassName(descriptor_),
-        "extra_interfaces", ExtraBuilderInterfaces(descriptor_), "ver",
-        GeneratedCodeVersionSuffix());
+        "extra_interfaces", ExtraBuilderInterfaces(descriptor_));
   }
   printer->Indent();
 
@@ -174,27 +165,6 @@ void MessageBuilderGenerator::Generate(io::Printer* printer) {
         .GenerateBuilderMembers(printer);
   }
 
-  if (context_->options().opensource_runtime) {
-    // Override methods declared in GeneratedMessage to return the concrete
-    // generated type so callsites won't depend on GeneratedMessage. This
-    // is needed to keep binary compatibility when we change generated code
-    // to subclass a different GeneratedMessage class (e.g., in v3.0.0 release
-    // we changed all generated code to subclass GeneratedMessageV3).
-    printer->Print(
-        "@java.lang.Override\n"
-        "public final Builder setUnknownFields(\n"
-        "    final com.google.protobuf.UnknownFieldSet unknownFields) {\n"
-        "  return super.setUnknownFields(unknownFields);\n"
-        "}\n"
-        "\n"
-        "@java.lang.Override\n"
-        "public final Builder mergeUnknownFields(\n"
-        "    final com.google.protobuf.UnknownFieldSet unknownFields) {\n"
-        "  return super.mergeUnknownFields(unknownFields);\n"
-        "}\n"
-        "\n");
-  }
-
   printer->Print(
       "\n"
       "// @@protoc_insertion_point(builder_scope:$full_name$)\n",
@@ -228,7 +198,8 @@ void MessageBuilderGenerator::GenerateDescriptorMethods(io::Printer* printer) {
   if (!map_fields.empty()) {
     printer->Print(
         "@SuppressWarnings({\"rawtypes\"})\n"
-        "protected com.google.protobuf.MapField internalGetMapField(\n"
+        "protected com.google.protobuf.MapFieldReflectionAccessor "
+        "internalGetMapFieldReflection(\n"
         "    int number) {\n"
         "  switch (number) {\n");
     printer->Indent();
@@ -253,7 +224,8 @@ void MessageBuilderGenerator::GenerateDescriptorMethods(io::Printer* printer) {
         "}\n");
     printer->Print(
         "@SuppressWarnings({\"rawtypes\"})\n"
-        "protected com.google.protobuf.MapField internalGetMutableMapField(\n"
+        "protected com.google.protobuf.MapFieldReflectionAccessor "
+        "internalGetMutableMapFieldReflection(\n"
         "    int number) {\n"
         "  switch (number) {\n");
     printer->Indent();
@@ -279,7 +251,7 @@ void MessageBuilderGenerator::GenerateDescriptorMethods(io::Printer* printer) {
   }
   printer->Print(
       "@java.lang.Override\n"
-      "protected com.google.protobuf.GeneratedMessage$ver$.FieldAccessorTable\n"
+      "protected com.google.protobuf.GeneratedMessage.FieldAccessorTable\n"
       "    internalGetFieldAccessorTable() {\n"
       "  return $fileclass$.internal_$identifier$_fieldAccessorTable\n"
       "      .ensureFieldAccessorsInitialized(\n"
@@ -288,8 +260,7 @@ void MessageBuilderGenerator::GenerateDescriptorMethods(io::Printer* printer) {
       "\n",
       "classname", name_resolver_->GetImmutableClassName(descriptor_),
       "fileclass", name_resolver_->GetImmutableClassName(descriptor_->file()),
-      "identifier", UniqueFileScopeIdentifier(descriptor_), "ver",
-      GeneratedCodeVersionSuffix());
+      "identifier", UniqueFileScopeIdentifier(descriptor_));
 }
 
 // ===================================================================
@@ -298,7 +269,7 @@ void MessageBuilderGenerator::GenerateCommonBuilderMethods(
     io::Printer* printer) {
   // Decide if we really need to have the "maybeForceBuilderInitialization()"
   // method.
-  // TODO(b/249158148): Remove the need for this entirely
+  // TODO: Remove the need for this entirely
   bool need_maybe_force_builder_init = false;
   for (int i = 0; i < descriptor_->field_count(); i++) {
     if (descriptor_->field(i)->message_type() != nullptr &&
@@ -324,19 +295,18 @@ void MessageBuilderGenerator::GenerateCommonBuilderMethods(
 
   printer->Print(
       "private Builder(\n"
-      "    com.google.protobuf.GeneratedMessage$ver$.BuilderParent parent) {\n"
+      "    com.google.protobuf.GeneratedMessage.BuilderParent parent) {\n"
       "  super(parent);\n"
       "$force_builder_init$\n"
       "}\n",
-      "classname", name_resolver_->GetImmutableClassName(descriptor_), "ver",
-      GeneratedCodeVersionSuffix(), "force_builder_init", force_builder_init);
+      "classname", name_resolver_->GetImmutableClassName(descriptor_),
+      "force_builder_init", force_builder_init);
 
   if (need_maybe_force_builder_init) {
     printer->Print(
         "private void maybeForceBuilderInitialization() {\n"
-        "  if (com.google.protobuf.GeneratedMessage$ver$\n"
-        "          .alwaysUseFieldBuilders) {\n",
-        "ver", GeneratedCodeVersionSuffix());
+        "  if (com.google.protobuf.GeneratedMessage\n"
+        "          .alwaysUseFieldBuilders) {\n");
 
     printer->Indent();
     printer->Indent();
@@ -506,8 +476,7 @@ void MessageBuilderGenerator::GenerateBuildPartial(io::Printer* printer) {
   // Handle the repeated fields first so that the "mutable bits" are cleared.
   bool has_repeated_fields = false;
   for (int i = 0; i < descriptor_->field_count(); ++i) {
-    if (descriptor_->field(i)->is_repeated() &&
-        !IsMapField(descriptor_->field(i))) {
+    if (BitfieldTracksMutability(descriptor_->field(i))) {
       has_repeated_fields = true;
       printer->Print("buildPartialRepeatedFields(result);\n");
       break;
@@ -543,8 +512,7 @@ void MessageBuilderGenerator::GenerateBuildPartial(io::Printer* printer) {
         "classname", name_resolver_->GetImmutableClassName(descriptor_));
     printer->Indent();
     for (int i = 0; i < descriptor_->field_count(); ++i) {
-      if (descriptor_->field(i)->is_repeated() &&
-          !IsMapField(descriptor_->field(i))) {
+      if (BitfieldTracksMutability(descriptor_->field(i))) {
         const ImmutableFieldGenerator& field =
             field_generators_.get(descriptor_->field(i));
         field.GenerateBuildingCode(printer);
@@ -610,8 +578,7 @@ int MessageBuilderGenerator::GenerateBuildPartialPiece(io::Printer* printer,
 
     // Skip repeated fields because they are currently handled
     // in separate buildPartial sub-methods.
-    if (descriptor_->field(next)->is_repeated() &&
-        !IsMapField(descriptor_->field(next))) {
+    if (BitfieldTracksMutability(descriptor_->field(next))) {
       continue;
     }
     // Skip fields without presence bits in the builder
@@ -752,7 +719,7 @@ void MessageBuilderGenerator::GenerateIsInitialized(io::Printer* printer) {
   printer->Indent();
 
   // Check that all required fields in this message are set.
-  // TODO(kenton):  We can optimize this when we switch to putting all the
+  // TODO:  We can optimize this when we switch to putting all the
   //   "has" fields into a single bitfield.
   for (int i = 0; i < descriptor_->field_count(); i++) {
     const FieldDescriptor* field = descriptor_->field(i);

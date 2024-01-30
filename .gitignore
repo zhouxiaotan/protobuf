@@ -58,6 +58,7 @@ src/js_embed
 
 # vim generated
 *.swp
+*~
 
 # Generated test scaffolding
 src/no_warning_test.cc
@@ -208,3 +209,6 @@ BenchmarkDotNet.Artifacts/
 # Clangd uses these common ephemeral files
 .cache
 compile_commands.json
+
+# Ignore GHA NodeJS files
+.github/**/node_modules/

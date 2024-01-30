@@ -1,32 +1,9 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//     * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//     * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
 
 // Author: kenton@google.com (Kenton Varda)
 //  Based on original Protocol Buffers design by
@@ -35,8 +12,12 @@
 // Contains methods defined in extension_set.h which cannot be part of the
 // lite library because they use descriptors or reflection.
 
+#include <cstddef>
+#include <cstdint>
+#include <vector>
+
+#include "absl/log/absl_check.h"
 #include "google/protobuf/arena.h"
-#include "absl/base/casts.h"
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/descriptor.pb.h"
 #include "google/protobuf/extension_set.h"
@@ -48,7 +29,6 @@
 #include "google/protobuf/port.h"
 #include "google/protobuf/repeated_field.h"
 #include "google/protobuf/unknown_field_set.h"
-#include "google/protobuf/wire_format.h"
 #include "google/protobuf/wire_format_lite.h"
 
 
@@ -66,8 +46,8 @@ class DescriptorPoolExtensionFinder {
  public:
   DescriptorPoolExtensionFinder(const DescriptorPool* pool,
                                 MessageFactory* factory,
-                                const Descriptor* containing_type)
-      : pool_(pool), factory_(factory), containing_type_(containing_type) {}
+                                const Descriptor* extendee)
+      : pool_(pool), factory_(factory), containing_type_(extendee) {}
 
   bool Find(int number, ExtensionInfo* output);
 
@@ -78,9 +58,9 @@ class DescriptorPoolExtensionFinder {
 };
 
 void ExtensionSet::AppendToList(
-    const Descriptor* containing_type, const DescriptorPool* pool,
+    const Descriptor* extendee, const DescriptorPool* pool,
     std::vector<const FieldDescriptor*>* output) const {
-  ForEach([containing_type, pool, &output](int number, const Extension& ext) {
+  ForEach([extendee, pool, &output](int number, const Extension& ext) {
     bool has = false;
     if (ext.is_repeated) {
       has = ext.GetSize() > 0;
@@ -89,13 +69,13 @@ void ExtensionSet::AppendToList(
     }
 
     if (has) {
-      // TODO(kenton): Looking up each field by number is somewhat unfortunate.
+      // TODO: Looking up each field by number is somewhat unfortunate.
       //   Is there a better way?  The problem is that descriptors are lazily-
       //   initialized, so they might not even be constructed until
       //   AppendToList() is called.
 
       if (ext.descriptor == nullptr) {
-        output->push_back(pool->FindExtensionByNumber(containing_type, number));
+        output->push_back(pool->FindExtensionByNumber(extendee, number));
       } else {
         output->push_back(ext.descriptor);
       }
@@ -285,7 +265,7 @@ bool DescriptorPoolExtensionFinder::Find(int number, ExtensionInfo* output) {
   } else {
     output->type = extension->type();
     output->is_repeated = extension->is_repeated();
-    output->is_packed = extension->options().packed();
+    output->is_packed = extension->is_packed();
     output->descriptor = extension;
     if (extension->cpp_type() == FieldDescriptor::CPPTYPE_MESSAGE) {
       output->message_info.prototype =
@@ -293,6 +273,11 @@ bool DescriptorPoolExtensionFinder::Find(int number, ExtensionInfo* output) {
       ABSL_CHECK(output->message_info.prototype != nullptr)
           << "Extension factory's GetPrototype() returned nullptr; extension: "
           << extension->full_name();
+
+      if (extension->options().has_lazy()) {
+        output->is_lazy = extension->options().lazy() ? LazyAnnotation::kLazy
+                                                      : LazyAnnotation::kEager;
+      }
     } else if (extension->cpp_type() == FieldDescriptor::CPPTYPE_ENUM) {
       output->enum_validity_check.func = ValidateEnumUsingDescriptor;
       output->enum_validity_check.arg = extension->enum_type();
@@ -304,19 +289,19 @@ bool DescriptorPoolExtensionFinder::Find(int number, ExtensionInfo* output) {
 
 
 bool ExtensionSet::FindExtension(int wire_type, uint32_t field,
-                                 const Message* containing_type,
+                                 const Message* extendee,
                                  const internal::ParseContext* ctx,
                                  ExtensionInfo* extension,
                                  bool* was_packed_on_wire) {
   if (ctx->data().pool == nullptr) {
-    GeneratedExtensionFinder finder(containing_type);
+    GeneratedExtensionFinder finder(extendee);
     if (!FindExtensionInfoFromFieldNumber(wire_type, field, &finder, extension,
                                           was_packed_on_wire)) {
       return false;
     }
   } else {
     DescriptorPoolExtensionFinder finder(ctx->data().pool, ctx->data().factory,
-                                         containing_type->GetDescriptor());
+                                         extendee->GetDescriptor());
     if (!FindExtensionInfoFromFieldNumber(wire_type, field, &finder, extension,
                                           was_packed_on_wire)) {
       return false;
@@ -325,14 +310,15 @@ bool ExtensionSet::FindExtension(int wire_type, uint32_t field,
   return true;
 }
 
+
 const char* ExtensionSet::ParseField(uint64_t tag, const char* ptr,
-                                     const Message* containing_type,
+                                     const Message* extendee,
                                      internal::InternalMetadata* metadata,
                                      internal::ParseContext* ctx) {
   int number = tag >> 3;
   bool was_packed_on_wire;
   ExtensionInfo extension;
-  if (!FindExtension(tag & 7, number, containing_type, ctx, &extension,
+  if (!FindExtension(tag & 7, number, extendee, ctx, &extension,
                      &was_packed_on_wire)) {
     return UnknownFieldParse(
         tag, metadata->mutable_unknown_fields<UnknownFieldSet>(), ptr, ctx);
@@ -342,15 +328,15 @@ const char* ExtensionSet::ParseField(uint64_t tag, const char* ptr,
 }
 
 const char* ExtensionSet::ParseFieldMaybeLazily(
-    uint64_t tag, const char* ptr, const Message* containing_type,
+    uint64_t tag, const char* ptr, const Message* extendee,
     internal::InternalMetadata* metadata, internal::ParseContext* ctx) {
-  return ParseField(tag, ptr, containing_type, metadata, ctx);
+  return ParseField(tag, ptr, extendee, metadata, ctx);
 }
 
 const char* ExtensionSet::ParseMessageSetItem(
-    const char* ptr, const Message* containing_type,
+    const char* ptr, const Message* extendee,
     internal::InternalMetadata* metadata, internal::ParseContext* ctx) {
-  return ParseMessageSetItemTmpl<Message, UnknownFieldSet>(ptr, containing_type,
+  return ParseMessageSetItemTmpl<Message, UnknownFieldSet>(ptr, extendee,
                                                            metadata, ctx);
 }
 

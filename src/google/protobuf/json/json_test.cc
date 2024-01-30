@@ -1,32 +1,9 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//     * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//     * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
 
 #include "google/protobuf/json/json.h"
 
@@ -49,6 +26,7 @@
 #include "absl/strings/string_view.h"
 #include "google/protobuf/descriptor_database.h"
 #include "google/protobuf/dynamic_message.h"
+#include "google/protobuf/io/test_zero_copy_stream.h"
 #include "google/protobuf/io/zero_copy_stream.h"
 #include "google/protobuf/io/zero_copy_stream_impl_lite.h"
 #include "google/protobuf/util/json_format.pb.h"
@@ -73,12 +51,13 @@ using ::proto3::TestMap;
 using ::proto3::TestMessage;
 using ::proto3::TestOneof;
 using ::proto3::TestWrapper;
+using ::testing::ContainsRegex;
 using ::testing::ElementsAre;
 using ::testing::IsEmpty;
 using ::testing::Not;
 using ::testing::SizeIs;
 
-// TODO(b/234474291): Use the gtest versions once that's available in OSS.
+// TODO: Use the gtest versions once that's available in OSS.
 MATCHER_P(IsOkAndHolds, inner,
           absl::StrCat("is OK and holds ", testing::PrintToString(inner))) {
   if (!arg.ok()) {
@@ -225,6 +204,9 @@ TEST_P(JsonTest, TestDefaultValues) {
 
   m.set_string_value("i am a test string value");
   m.set_bytes_value("i am a test bytes value");
+  m.set_optional_bool_value(false);
+  m.set_optional_string_value("");
+  m.set_optional_bytes_value("");
   EXPECT_THAT(
       ToJson(m, options),
       IsOkAndHolds("{\"boolValue\":false,"
@@ -247,7 +229,10 @@ TEST_P(JsonTest, TestDefaultValues) {
                    "\"repeatedStringValue\":[],"
                    "\"repeatedBytesValue\":[],"
                    "\"repeatedEnumValue\":[],"
-                   "\"repeatedMessageValue\":[]"
+                   "\"repeatedMessageValue\":[],"
+                   "\"optionalBoolValue\":false,"
+                   "\"optionalStringValue\":\"\","
+                   "\"optionalBytesValue\":\"\""
                    "}"));
 
   EXPECT_THAT(
@@ -313,6 +298,28 @@ TEST_P(JsonTest, EvilString) {
                                 "\"}");
   ASSERT_OK(m);
   EXPECT_EQ(m->string_value(), "\n\r\b\f\1\2\3");
+}
+
+TEST_P(JsonTest, Unquoted64) {
+  TestMessage m;
+  m.add_repeated_int64_value(0);
+  m.add_repeated_int64_value(42);
+  m.add_repeated_int64_value(-((int64_t{1} << 60) + 1));
+  m.add_repeated_int64_value(INT64_MAX);
+  // This is a power of two and is therefore representable.
+  m.add_repeated_int64_value(INT64_MIN);
+  m.add_repeated_uint64_value(0);
+  m.add_repeated_uint64_value(42);
+  m.add_repeated_uint64_value((uint64_t{1} << 60) + 1);
+  // This will be UB without the min/max check in RoundTripsThroughDouble().
+  m.add_repeated_uint64_value(UINT64_MAX);
+
+  PrintOptions opts;
+  opts.unquote_int64_if_possible = true;
+  EXPECT_THAT(
+      ToJson(m, opts),
+      R"({"repeatedInt64Value":[0,42,"-1152921504606846977","9223372036854775807",-9223372036854775808],)"
+      R"("repeatedUint64Value":[0,42,"1152921504606846977","18446744073709551615"]})");
 }
 
 TEST_P(JsonTest, TestAlwaysPrintEnumsAsInts) {
@@ -1143,7 +1150,7 @@ TEST_P(JsonTest, TestDuration) {
   EXPECT_THAT(ToJson(m5->value()), IsOkAndHolds("\"0.500s\""));
 }
 
-// These tests are not exhaustive; tests in //third_party/protobuf/conformance
+// These tests are not exhaustive; tests in //google/protobuf/conformance
 // are more comprehensive.
 TEST_P(JsonTest, TestTimestamp) {
   auto m = ToProto<proto3::TestTimestamp>(R"json(
@@ -1330,6 +1337,24 @@ TEST_P(JsonTest, ClearPreExistingRepeatedInJsonValues) {
   (*s.mutable_fields())["hello"].set_string_value("world");
   ASSERT_OK(JsonStringToMessage("{}", &s));
   EXPECT_THAT(s.fields(), IsEmpty());
+}
+
+TEST(JsonErrorTest, FieldNameAndSyntaxErrorInSeparateChunks) {
+  std::unique_ptr<TypeResolver> resolver{
+      google::protobuf::util::NewTypeResolverForDescriptorPool(
+          "type.googleapis.com", DescriptorPool::generated_pool())};
+  io::internal::TestZeroCopyInputStream input_stream(
+      {"{\"bool_value\":", "5}"});
+  std::string result;
+  io::StringOutputStream output_stream(&result);
+  absl::Status s = JsonToBinaryStream(
+      resolver.get(), "type.googleapis.com/proto3.TestMessage", &input_stream,
+      &output_stream, ParseOptions{});
+  ASSERT_FALSE(s.ok());
+  EXPECT_THAT(
+      s.message(),
+      ContainsRegex("invalid *JSON *in *type.googleapis.com/proto3.TestMessage "
+                    "*@ *bool_value"));
 }
 
 }  // namespace

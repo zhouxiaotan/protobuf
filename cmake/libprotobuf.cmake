@@ -1,6 +1,7 @@
 # CMake definitions for libprotobuf (the "full" C++ protobuf runtime).
 
 include(${protobuf_SOURCE_DIR}/src/file_lists.cmake)
+include(${protobuf_SOURCE_DIR}/cmake/protobuf-configure-target.cmake)
 
 add_library(libprotobuf ${protobuf_SHARED_OR_STATIC}
   ${libprotobuf_srcs}
@@ -27,6 +28,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Android")
 endif()
 target_include_directories(libprotobuf PUBLIC ${protobuf_SOURCE_DIR}/src)
 target_link_libraries(libprotobuf PUBLIC ${protobuf_ABSL_USED_TARGETS})
+protobuf_configure_target(libprotobuf)
 if(protobuf_BUILD_SHARED_LIBS)
   target_compile_definitions(libprotobuf
     PUBLIC  PROTOBUF_USE_DLLS
@@ -43,5 +45,4 @@ set_target_properties(libprotobuf PROPERTIES
 )
 add_library(protobuf::libprotobuf ALIAS libprotobuf)
 
-target_include_directories(libprotobuf PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/third_party/utf8_range)
 target_link_libraries(libprotobuf PRIVATE utf8_validity)

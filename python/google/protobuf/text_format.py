@@ -1,32 +1,9 @@
 # Protocol Buffers - Google's data interchange format
 # Copyright 2008 Google Inc.  All rights reserved.
-# https://developers.google.com/protocol-buffers/
 #
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#
-#     * Redistributions of source code must retain the above copyright
-# notice, this list of conditions and the following disclaimer.
-#     * Redistributions in binary form must reproduce the above
-# copyright notice, this list of conditions and the following disclaimer
-# in the documentation and/or other materials provided with the
-# distribution.
-#     * Neither the name of Google Inc. nor the names of its
-# contributors may be used to endorse or promote products derived from
-# this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file or at
+# https://developers.google.com/open-source/licenses/bsd
 
 """Contains routines for printing protocol messages in text format.
 
@@ -42,7 +19,7 @@ Simple usage example::
 
 __author__ = 'kenton@google.com (Kenton Varda)'
 
-# TODO(b/129989314) Import thread contention leads to test failures.
+# TODO Import thread contention leads to test failures.
 import encodings.raw_unicode_escape  # pylint: disable=unused-import
 import encodings.unicode_escape  # pylint: disable=unused-import
 import io
@@ -68,6 +45,8 @@ _FLOAT_NAN = re.compile('nanf?$', re.IGNORECASE)
 _QUOTES = frozenset(("'", '"'))
 _ANY_FULL_TYPE_NAME = 'google.protobuf.Any'
 _DEBUG_STRING_SILENT_MARKER = '\t '
+
+_as_utf8_default = True
 
 
 class Error(Exception):
@@ -114,7 +93,7 @@ class TextWriter(object):
 
 def MessageToString(
     message,
-    as_utf8=False,
+    as_utf8=_as_utf8_default,
     as_one_line=False,
     use_short_repeated_primitives=False,
     pointy_brackets=False,
@@ -209,7 +188,7 @@ def _IsMapEntry(field):
 def PrintMessage(message,
                  out,
                  indent=0,
-                 as_utf8=False,
+                 as_utf8=_as_utf8_default,
                  as_one_line=False,
                  use_short_repeated_primitives=False,
                  pointy_brackets=False,
@@ -271,7 +250,7 @@ def PrintField(field,
                value,
                out,
                indent=0,
-               as_utf8=False,
+               as_utf8=_as_utf8_default,
                as_one_line=False,
                use_short_repeated_primitives=False,
                pointy_brackets=False,
@@ -295,7 +274,7 @@ def PrintFieldValue(field,
                     value,
                     out,
                     indent=0,
-                    as_utf8=False,
+                    as_utf8=_as_utf8_default,
                     as_one_line=False,
                     use_short_repeated_primitives=False,
                     pointy_brackets=False,
@@ -351,7 +330,7 @@ class _Printer(object):
       self,
       out,
       indent=0,
-      as_utf8=False,
+      as_utf8=_as_utf8_default,
       as_one_line=False,
       use_short_repeated_primitives=False,
       pointy_brackets=False,
@@ -464,7 +443,7 @@ class _Printer(object):
           # entire tree.  Unfortunately this would take significant refactoring
           # of this file to work around.
           #
-          # TODO(haberman): refactor and optimize if this becomes an issue.
+          # TODO: refactor and optimize if this becomes an issue.
           entry_submsg = value.GetEntryClass()(key=key, value=value[key])
           self.PrintField(field, entry_submsg)
       elif field.label == descriptor.FieldDescriptor.LABEL_REPEATED:
@@ -1070,7 +1049,7 @@ class _Parser(object):
         sub_message = message.Extensions[field]
       else:
         # Also apply _allow_multiple_scalars to message field.
-        # TODO(jieluo): Change to _allow_singular_overwrites.
+        # TODO: Change to _allow_singular_overwrites.
         if (not self._allow_multiple_scalars and
             message.HasField(field.name)):
           raise tokenizer.ParseErrorPreviousToken(
@@ -1254,15 +1233,10 @@ class _Parser(object):
     Raises:
       ParseError: In case an invalid field value is found.
     """
-    # String/bytes tokens can come in multiple adjacent string literals.
-    # If we can consume one, consume as many as we can.
-    if tokenizer.TryConsumeByteString():
-      while tokenizer.TryConsumeByteString():
-        pass
-      return
-
-    if (not tokenizer.TryConsumeIdentifier() and
-        not _TryConsumeInt64(tokenizer) and not _TryConsumeUint64(tokenizer) and
+    if (not tokenizer.TryConsumeByteString()and
+        not tokenizer.TryConsumeIdentifier() and
+        not _TryConsumeInt64(tokenizer) and
+        not _TryConsumeUint64(tokenizer) and
         not tokenizer.TryConsumeFloat()):
       raise ParseError('Invalid field value: ' + tokenizer.token)
 
@@ -1625,7 +1599,7 @@ class Tokenizer(object):
       self.token = self._current_line[self._column]
 
 # Aliased so it can still be accessed by current visibility violators.
-# TODO(dbarnett): Migrate violators to textformat_tokenizer.
+# TODO: Migrate violators to textformat_tokenizer.
 _Tokenizer = Tokenizer  # pylint: disable=invalid-name
 
 

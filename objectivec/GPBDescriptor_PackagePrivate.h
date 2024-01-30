@@ -1,32 +1,9 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//     * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//     * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
 
 // This header is private to the ProtobolBuffers library and must NOT be
 // included by any sources outside this library. The contents of this file are
@@ -91,6 +68,15 @@ typedef NS_OPTIONS(uint16_t, GPBFieldFlags) {
 // their size. This directly impacts the size of apps since these exist per
 // field/extension.
 
+typedef struct GPBFileDescription {
+  // The proto package for the file.
+  const char *package;
+  // The objc_class_prefix option if present.
+  const char *prefix;
+  // The file's proto syntax.
+  GPBFileSyntax syntax;
+} GPBFileDescription;
+
 // Describes a single field in a protobuf as it is represented as an ivar.
 typedef struct GPBMessageFieldDescription {
   // Name of ivar.
@@ -119,8 +105,8 @@ typedef struct GPBMessageFieldDescription {
   GPBDataType dataType;
 } GPBMessageFieldDescription;
 
-// Fields in messages defined in a 'proto2' syntax file can provide a default
-// value. This struct provides the default along with the field info.
+// If a message uses fields where they provide default values that are non zero, then this
+// struct is used to provide the values along with the field info.
 typedef struct GPBMessageFieldDescriptionWithDefault {
   // Default value for the ivar.
   GPBGenericValue defaultValue;
@@ -200,9 +186,10 @@ typedef NS_OPTIONS(uint32_t, GPBDescriptorInitializationFlags) {
   uint32_t storageSize_;
 }
 
-// fieldDescriptions have to be long lived, they are held as raw pointers.
+// fieldDescriptions and fileDescription have to be long lived, they are held as raw pointers.
 + (instancetype)allocDescriptorForClass:(Class)messageClass
-                                   file:(GPBFileDescriptor *)file
+                            messageName:(NSString *)messageName
+                        fileDescription:(GPBFileDescription *)fileDescription
                                  fields:(void *)fieldDescriptions
                              fieldCount:(uint32_t)fieldCount
                             storageSize:(uint32_t)storageSize
@@ -217,9 +204,14 @@ typedef NS_OPTIONS(uint32_t, GPBDescriptorInitializationFlags) {
 - (void)setupExtraTextInfo:(const char *)extraTextFormatInfo;
 - (void)setupExtensionRanges:(const GPBExtensionRange *)ranges count:(int32_t)count;
 - (void)setupContainingMessageClass:(Class)msgClass;
-- (void)setupMessageClassNameSuffix:(NSString *)suffix;
 
 // Deprecated, these remain to support older versions of source generation.
++ (instancetype)allocDescriptorForClass:(Class)messageClass
+                                   file:(GPBFileDescriptor *)file
+                                 fields:(void *)fieldDescriptions
+                             fieldCount:(uint32_t)fieldCount
+                            storageSize:(uint32_t)storageSize
+                                  flags:(GPBDescriptorInitializationFlags)flags;
 + (instancetype)allocDescriptorForClass:(Class)messageClass
                               rootClass:(Class)rootClass
                                    file:(GPBFileDescriptor *)file
@@ -228,6 +220,7 @@ typedef NS_OPTIONS(uint32_t, GPBDescriptorInitializationFlags) {
                             storageSize:(uint32_t)storageSize
                                   flags:(GPBDescriptorInitializationFlags)flags;
 - (void)setupContainingMessageClassName:(const char *)msgClassName;
+- (void)setupMessageClassNameSuffix:(NSString *)suffix;
 
 @end
 
@@ -262,6 +255,8 @@ typedef NS_OPTIONS(uint32_t, GPBDescriptorInitializationFlags) {
 
 typedef NS_OPTIONS(uint32_t, GPBEnumDescriptorInitializationFlags) {
   GPBEnumDescriptorInitializationFlag_None = 0,
+
+  // Available: 1 << 0
 
   // Marks this enum as a closed enum.
   GPBEnumDescriptorInitializationFlag_IsClosed = 1 << 1,

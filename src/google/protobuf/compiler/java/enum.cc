@@ -1,32 +1,9 @@
 // Protocol Buffers - Google's data interchange format
 // Copyright 2008 Google Inc.  All rights reserved.
-// https://developers.google.com/protocol-buffers/
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
-//
-//     * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//     * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//     * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file or at
+// https://developers.google.com/open-source/licenses/bsd
 
 // Author: kenton@google.com (Kenton Varda)
 //  Based on original Protocol Buffers design by
@@ -78,7 +55,7 @@ EnumGenerator::EnumGenerator(const EnumDescriptor* descriptor,
 EnumGenerator::~EnumGenerator() {}
 
 void EnumGenerator::Generate(io::Printer* printer) {
-  WriteEnumDocComment(printer, descriptor_);
+  WriteEnumDocComment(printer, descriptor_, context_->options());
   MaybePrintGeneratedAnnotation(context_, printer, descriptor_, immutable_api_);
 
   if (!context_->options().opensource_runtime) {
@@ -107,7 +84,8 @@ void EnumGenerator::Generate(io::Printer* printer) {
     vars["name"] = canonical_values_[i]->name();
     vars["index"] = absl::StrCat(canonical_values_[i]->index());
     vars["number"] = absl::StrCat(canonical_values_[i]->number());
-    WriteEnumValueDocComment(printer, canonical_values_[i]);
+    WriteEnumValueDocComment(printer, canonical_values_[i],
+                             context_->options());
     if (canonical_values_[i]->options().deprecated()) {
       printer->Print("@java.lang.Deprecated\n");
     }
@@ -119,7 +97,7 @@ void EnumGenerator::Generate(io::Printer* printer) {
     printer->Annotate("name", canonical_values_[i]);
   }
 
-  if (SupportUnknownEnumValue(descriptor_->file())) {
+  if (!descriptor_->is_closed()) {
     if (ordinal_is_index) {
       printer->Print("${$UNRECOGNIZED$}$(-1),\n", "{", "", "}", "");
     } else {
@@ -134,12 +112,19 @@ void EnumGenerator::Generate(io::Printer* printer) {
 
   // -----------------------------------------------------------------
 
+  printer->Print("static {\n");
+  printer->Indent();
+  PrintGencodeVersionValidator(printer, context_->options().opensource_runtime,
+                               descriptor_->name());
+  printer->Outdent();
+  printer->Print("}\n");
+
   for (int i = 0; i < aliases_.size(); i++) {
     absl::flat_hash_map<absl::string_view, std::string> vars;
     vars["classname"] = descriptor_->name();
     vars["name"] = aliases_[i].value->name();
     vars["canonical_name"] = aliases_[i].canonical_value->name();
-    WriteEnumValueDocComment(printer, aliases_[i].value);
+    WriteEnumValueDocComment(printer, aliases_[i].value, context_->options());
     printer->Print(
         vars, "public static final $classname$ $name$ = $canonical_name$;\n");
     printer->Annotate("name", aliases_[i].value);
@@ -154,7 +139,8 @@ void EnumGenerator::Generate(io::Printer* printer) {
     vars["deprecation"] = descriptor_->value(i)->options().deprecated()
                               ? "@java.lang.Deprecated "
                               : "";
-    WriteEnumValueDocComment(printer, descriptor_->value(i));
+    WriteEnumValueDocComment(printer, descriptor_->value(i),
+                             context_->options());
     printer->Print(vars,
                    "$deprecation$public static final int ${$$name$_VALUE$}$ = "
                    "$number$;\n");
@@ -167,7 +153,7 @@ void EnumGenerator::Generate(io::Printer* printer) {
   printer->Print(
       "\n"
       "public final int getNumber() {\n");
-  if (SupportUnknownEnumValue(descriptor_->file())) {
+  if (!descriptor_->is_closed()) {
     if (ordinal_is_index) {
       printer->Print(
           "  if (this == UNRECOGNIZED) {\n"
@@ -251,7 +237,7 @@ void EnumGenerator::Generate(io::Printer* printer) {
     printer->Print(
         "public final com.google.protobuf.Descriptors.EnumValueDescriptor\n"
         "    getValueDescriptor() {\n");
-    if (SupportUnknownEnumValue(descriptor_->file())) {
+    if (!descriptor_->is_closed()) {
       if (ordinal_is_index) {
         printer->Print(
             "  if (this == UNRECOGNIZED) {\n"
@@ -279,7 +265,7 @@ void EnumGenerator::Generate(io::Printer* printer) {
         "    getDescriptor() {\n",
         "index_text", index_text);
 
-    // TODO(kenton):  Cache statically?  Note that we can't access descriptors
+    // TODO:  Cache statically?  Note that we can't access descriptors
     //   at module init time because it wouldn't work with descriptor.proto, but
     //   we can cache the value the first time getDescriptor() is called.
     if (descriptor_->containing_type() == NULL) {
@@ -346,7 +332,7 @@ void EnumGenerator::Generate(io::Printer* printer) {
         "      \"EnumValueDescriptor is not for this type.\");\n"
         "  }\n",
         "classname", descriptor_->name());
-    if (SupportUnknownEnumValue(descriptor_->file())) {
+    if (!descriptor_->is_closed()) {
       printer->Print(
           "  if (desc.getIndex() == -1) {\n"
           "    return UNRECOGNIZED;\n"

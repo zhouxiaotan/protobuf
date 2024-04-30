@@ -44,9 +44,11 @@ static void Message_mark(void* _self) {
   rb_gc_mark(self->arena);
 }
 
+static size_t Message_memsize(const void* _self) { return sizeof(Message); }
+
 static rb_data_type_t Message_type = {
     "Google::Protobuf::Message",
-    {Message_mark, RUBY_DEFAULT_FREE, NULL},
+    {Message_mark, RUBY_DEFAULT_FREE, Message_memsize},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY | RUBY_TYPED_WB_PROTECTED,
 };
 
@@ -667,20 +669,6 @@ static VALUE Message_dup(VALUE _self) {
   return new_msg;
 }
 
-// Support function for Message_eq, and also used by other #eq functions.
-bool Message_Equal(const upb_Message* m1, const upb_Message* m2,
-                   const upb_MessageDef* m) {
-  upb_Status status;
-  upb_Status_Clear(&status);
-  bool return_value = shared_Message_Equal(m1, m2, m, &status);
-  if (upb_Status_IsOk(&status)) {
-    return return_value;
-  } else {
-    rb_raise(cParseError, "Message_Equal(): %s",
-             upb_Status_ErrorMessage(&status));
-  }
-}
-
 /*
  * call-seq:
  *     Message.==(other) => boolean
@@ -697,7 +685,10 @@ static VALUE Message_eq(VALUE _self, VALUE _other) {
   Message* other = ruby_to_Message(_other);
   assert(self->msgdef == other->msgdef);
 
-  return Message_Equal(self->msg, other->msg, self->msgdef) ? Qtrue : Qfalse;
+  const upb_MiniTable* m = upb_MessageDef_MiniTable(self->msgdef);
+  const int options = 0;
+  return upb_Message_IsEqual(self->msg, other->msg, m, options) ? Qtrue
+                                                                : Qfalse;
 }
 
 uint64_t Message_Hash(const upb_Message* msg, const upb_MessageDef* m,

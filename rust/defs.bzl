@@ -3,9 +3,11 @@
 Disclaimer: This project is experimental, under heavy development, and should not
 be used yet."""
 
+load("@rules_proto//proto:defs.bzl", "ProtoInfo", "proto_common")
 load(
     "//rust:aspects.bzl",
     "RustProtoInfo",
+    "proto_rust_toolchain_label",
     "rust_cc_proto_library_aspect",
     "rust_upb_proto_library_aspect",
 )
@@ -16,7 +18,7 @@ visibility([
     "//rust/...",
 ])
 
-def rust_proto_library(name, deps, visibility = [], **args):
+def rust_proto_library(name, deps, **args):
     """Declares all the boilerplate needed to use Rust protobufs conveniently.
 
     Hopefully no user will ever need to read this code.
@@ -29,13 +31,17 @@ def rust_proto_library(name, deps, visibility = [], **args):
     """
     if not name.endswith("_rust_proto"):
         fail("Name of each rust_proto_library target should end with `_rust_proto`")
+
+    alias_args = {}
+    if "visibility" in args:
+        alias_args["visibility"] = args.pop("visibility")
     native.alias(
         name = name,
         actual = select({
             "//rust:use_upb_kernel": name + "_upb_kernel",
             "//conditions:default": name + "_cpp_kernel",
         }),
-        visibility = visibility,
+        **alias_args
     )
 
     rust_upb_proto_library(
@@ -61,11 +67,13 @@ def _rust_proto_library_impl(ctx):
 
     dep = deps[0]
     rust_proto_info = dep[RustProtoInfo]
+
     dep_variant_info = rust_proto_info.dep_variant_info
     return [
         dep_variant_info.crate_info,
         dep_variant_info.dep_info,
         dep_variant_info.cc_info,
+        DefaultInfo(files = dep_variant_info.crate_info.srcs),
     ]
 
 def _make_rust_proto_library(is_upb):
@@ -74,8 +82,11 @@ def _make_rust_proto_library(is_upb):
         attrs = {
             "deps": attr.label_list(
                 mandatory = True,
-                providers = [ProtoInfo] if is_upb else [CcInfo],
+                providers = [ProtoInfo],
                 aspects = [rust_upb_proto_library_aspect if is_upb else rust_cc_proto_library_aspect],
+            ),
+            "_proto_lang_toolchain": attr.label(
+                default = Label(proto_rust_toolchain_label(is_upb)),
             ),
         },
     )

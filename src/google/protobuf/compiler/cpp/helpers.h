@@ -383,8 +383,20 @@ bool IsLazy(const FieldDescriptor* field, const Options& options,
 // Is this an explicit (non-profile driven) lazy field, as denoted by
 // lazy/unverified_lazy in the descriptor?
 inline bool IsExplicitLazy(const FieldDescriptor* field) {
+  if (field->is_map() || field->is_repeated()) {
+    return false;
+  }
+
+  if (field->cpp_type() != FieldDescriptor::CPPTYPE_MESSAGE) {
+    return false;
+  }
+
   return field->options().lazy() || field->options().unverified_lazy();
 }
+
+internal::field_layout::TransformValidation GetLazyStyle(
+    const FieldDescriptor* field, const Options& options,
+    MessageSCCAnalyzer* scc_analyzer);
 
 bool IsEagerlyVerifiedLazy(const FieldDescriptor* field, const Options& options,
                            MessageSCCAnalyzer* scc_analyzer);
@@ -499,7 +511,7 @@ std::string UnderscoresToCamelCase(absl::string_view input,
                                    bool cap_next_letter);
 
 inline bool IsCrossFileMessage(const FieldDescriptor* field) {
-  return field->type() == FieldDescriptor::TYPE_MESSAGE &&
+  return field->cpp_type() == FieldDescriptor::CPPTYPE_MESSAGE &&
          field->message_type()->file() != field->file();
 }
 
@@ -778,11 +790,27 @@ void ListAllTypesForServices(const FileDescriptor* fd,
 bool UsingImplicitWeakDescriptor(const FileDescriptor* file,
                                  const Options& options);
 
+// Generates a strong reference to the message in `desc`, as a statement.
+std::string StrongReferenceToType(const Descriptor* desc,
+                                  const Options& options);
+
+// Generates the section name to be used for a data object when using implicit
+// weak descriptors. The prefix determines the kind of object and the section it
+// will be merged into afterwards.
+// See `UsingImplicitWeakDescriptor` above.
+std::string WeakDescriptorDataSection(absl::string_view prefix,
+                                      const Descriptor* descriptor,
+                                      int index_in_file_messages,
+                                      const Options& options);
+
 // Section name to be used for the default instance for implicit weak descriptor
 // objects. See `UsingImplicitWeakDescriptor` above.
-std::string WeakDefaultInstanceSection(const Descriptor* descriptor,
-                                       int index_in_file_messages,
-                                       const Options& options);
+inline std::string WeakDefaultInstanceSection(const Descriptor* descriptor,
+                                              int index_in_file_messages,
+                                              const Options& options) {
+  return WeakDescriptorDataSection("def", descriptor, index_in_file_messages,
+                                   options);
+}
 
 // Indicates whether we should use implicit weak fields for this file.
 bool UsingImplicitWeakFields(const FileDescriptor* file,
@@ -1137,6 +1165,26 @@ bool IsFileDescriptorProto(const FileDescriptor* file, const Options& options);
 // Some descriptors, like some map entries, are not represented as a generated
 // class.
 bool ShouldGenerateClass(const Descriptor* descriptor, const Options& options);
+
+
+// Determine if we are going to generate a tracker call for OnDeserialize.
+// This one is handled specially because we generate the PostLoopHandler for it.
+// We don't want to generate a handler if it is going to end up empty.
+bool HasOnDeserializeTracker(const Descriptor* descriptor,
+                             const Options& options);
+
+// Determine if we need a PostLoopHandler function to inject into TcParseTable's
+// ParseLoop.
+// If this returns true, the parse table generation will use
+// `&ClassName::PostLoopHandler` which should be a static function of the right
+// signature.
+bool NeedsPostLoopHandler(const Descriptor* descriptor, const Options& options);
+
+// Priority used for static initializers.
+enum InitPriority {
+  kInitPriority101,
+  kInitPriority102,
+};
 
 }  // namespace cpp
 }  // namespace compiler

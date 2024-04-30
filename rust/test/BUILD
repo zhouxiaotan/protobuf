@@ -4,7 +4,6 @@ load(
     "rust_proto_library",
     "rust_upb_proto_library",
 )
-load("@rules_cc//cc:defs.bzl", "cc_proto_library")
 
 UNITTEST_PROTO_TARGET = "//src/google/protobuf:test_protos"
 
@@ -15,9 +14,7 @@ UNITTEST_PROTO3_OPTIONAL_TARGET = "//src/google/protobuf:test_protos"
 rust_proto_library(
     name = "unittest_rust_proto",
     testonly = True,
-    visibility = [
-        "//visibility:private",  # Only private by automation, not intent. Owner may accept CLs adding visibility. See go/scheuklappen#explicit-private.
-    ],
+    visibility = ["//visibility:private"],
     deps = [UNITTEST_PROTO_TARGET],
 )
 
@@ -41,9 +38,7 @@ rust_cc_proto_library(
 rust_proto_library(
     name = "unittest_proto3_rust_proto",
     testonly = True,
-    visibility = [
-        "//visibility:private",  # Only private by automation, not intent. Owner may accept CLs adding visibility. See go/scheuklappen#explicit-private.
-    ],
+    visibility = ["//visibility:private"],
     deps = [
         UNITTEST_PROTO3_TARGET,
     ],
@@ -66,9 +61,7 @@ rust_upb_proto_library(
 rust_proto_library(
     name = "unittest_proto3_optional_rust_proto",
     testonly = True,
-    visibility = [
-        "//visibility:private",  # Only private by automation, not intent. Owner may accept CLs adding visibility. See go/scheuklappen#explicit-private.
-    ],
+    visibility = ["//visibility:private"],
     deps = [
         UNITTEST_PROTO3_OPTIONAL_TARGET,
     ],
@@ -230,17 +223,11 @@ proto_library(
     ],
 )
 
-cc_proto_library(
-    name = "import_public_cc_proto",
-    testonly = True,
-    deps = [":import_public_proto"],
-)
-
 rust_cc_proto_library(
     name = "import_public_cc_rust_proto",
     testonly = True,
     visibility = ["//rust/test/shared:__subpackages__"],
-    deps = [":import_public_cc_proto"],
+    deps = [":import_public_proto"],
 )
 
 rust_upb_proto_library(
@@ -334,37 +321,31 @@ rust_upb_proto_library(
     deps = [":package_disabiguation_proto"],
 )
 
-cc_proto_library(
-    name = "package_disabiguation_cc_proto",
-    testonly = True,
-    deps = [":package_disabiguation_proto"],
-)
-
 rust_cc_proto_library(
     name = "package_disabiguation_cc_rust_proto",
     testonly = True,
     visibility = ["//rust/test/shared:__subpackages__"],
-    deps = [":package_disabiguation_cc_proto"],
+    deps = [":package_disabiguation_proto"],
 )
 
 proto_library(
-    name = "reserved_proto",
+    name = "bad_names_proto",
     testonly = True,
-    srcs = ["reserved.proto"],
+    srcs = ["bad_names.proto"],
 )
 
 rust_cc_proto_library(
-    name = "reserved_cc_rust_proto",
+    name = "bad_names_cc_rust_proto",
     testonly = True,
     visibility = ["//rust/test/shared:__subpackages__"],
-    deps = [":reserved_proto"],
+    deps = [":bad_names_proto"],
 )
 
 rust_upb_proto_library(
-    name = "reserved_upb_rust_proto",
+    name = "bad_names_upb_rust_proto",
     testonly = True,
     visibility = ["//rust/test/shared:__subpackages__"],
-    deps = [":reserved_proto"],
+    deps = [":bad_names_proto"],
 )
 
 proto_library(
@@ -417,19 +398,13 @@ proto_library(
     srcs = ["struct.proto"],
 )
 
-cc_proto_library(
-    name = "struct_cc_proto",
-    testonly = True,
-    deps = [":struct"],
-)
-
 rust_cc_proto_library(
     name = "struct_cc_rust_proto",
     testonly = True,
     visibility = [
         "//rust/test/shared:__subpackages__",
     ],
-    deps = [":struct_cc_proto"],
+    deps = [":struct"],
 )
 
 rust_upb_proto_library(
@@ -447,19 +422,13 @@ proto_library(
     srcs = ["imported_types.proto"],
 )
 
-cc_proto_library(
-    name = "imported_types_cc_proto",
-    testonly = True,
-    deps = [":imported_types_proto"],
-)
-
 rust_cc_proto_library(
     name = "imported_types_cc_rust_proto",
     testonly = True,
     visibility = [
         "//rust/test/shared:__subpackages__",
     ],
-    deps = [":imported_types_cc_proto"],
+    deps = [":imported_types_proto"],
 )
 
 rust_upb_proto_library(
@@ -472,16 +441,11 @@ rust_upb_proto_library(
 )
 
 proto_library(
-    name = "fields_with_imported_types_proto",
+    # Test '-' occurrences are replaced with '_'.
+    name = "fields-with-imported-types_proto",
     testonly = True,
     srcs = ["fields_with_imported_types.proto"],
     deps = [":imported_types_proto"],
-)
-
-cc_proto_library(
-    name = "fields_with_imported_types_cc_proto",
-    testonly = True,
-    deps = [":fields_with_imported_types_proto"],
 )
 
 rust_cc_proto_library(
@@ -490,7 +454,7 @@ rust_cc_proto_library(
     visibility = [
         "//rust/test/shared:__subpackages__",
     ],
-    deps = [":fields_with_imported_types_cc_proto"],
+    deps = [":fields-with-imported-types_proto"],
 )
 
 rust_upb_proto_library(
@@ -499,5 +463,5 @@ rust_upb_proto_library(
     visibility = [
         "//rust/test/shared:__subpackages__",
     ],
-    deps = [":fields_with_imported_types_proto"],
+    deps = [":fields-with-imported-types_proto"],
 )

@@ -364,10 +364,9 @@ std::string PhpSetterTypeName(const FieldDescriptor* field,
     // accommodate for edge case with multiple types.
     size_t start_pos = type.find('|');
     if (start_pos != std::string::npos) {
-      type.replace(start_pos, 1, ">|array<");
+      type.replace(start_pos, 1, "[]|");
     }
-    type = absl::StrCat("array<", type,
-                        ">|\\Google\\Protobuf\\Internal\\RepeatedField");
+    type = absl::StrCat(type, "[]");
   }
   return type;
 }
@@ -422,10 +421,9 @@ std::string PhpGetterTypeName(const FieldDescriptor* field,
     // accommodate for edge case with multiple types.
     size_t start_pos = type.find('|');
     if (start_pos != std::string::npos) {
-      type.replace(start_pos, 1, ">|\\Google\\Protobuf\\Internal\\RepeatedField<");
+      type.replace(start_pos, 1, "[]|");
     }
-    type = absl::StrCat("\\Google\\Protobuf\\Internal\\RepeatedField<", type,
-                        ">");
+    type = absl::StrCat(type, "[]");
   }
   return type;
 }

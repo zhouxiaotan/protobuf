@@ -115,7 +115,7 @@ class GeneratedPhpdocTest extends TestBase
                     'getRepeatedEnum',
                     'getRepeatedNoNamespaceEnum',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<int>'
+                '@return int[]'
             ],
             [
                 [
@@ -125,45 +125,45 @@ class GeneratedPhpdocTest extends TestBase
                     'getRepeatedFixed64',
                     'getRepeatedSfixed64',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<int>|\Google\Protobuf\Internal\RepeatedField<string>'
+                '@return int[]|string[]'
             ],
             [
                 [
                     'getRepeatedFloat',
                     'getRepeatedDouble',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<float>'
+                '@return float[]'
             ],
             [
                 [
                     'getRepeatedBool',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<bool>'
+                '@return bool[]'
             ],
             [
                 [
                     'getRepeatedString',
                     'getRepeatedBytes',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<string>'
+                '@return string[]'
             ],
             [
                 [
                     'getRepeatedMessage',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<\Foo\TestMessage\Sub>'
+                '@return \Foo\TestMessage\Sub[]'
             ],
             [
                 [
                     'getRepeatedRecursive',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<\Foo\TestMessage>'
+                '@return \Foo\TestMessage[]'
             ],
             [
                 [
                     'getRepeatedNoNamespaceMessage',
                 ],
-                '@return \Google\Protobuf\Internal\RepeatedField<\NoNamespaceMessage>'
+                '@return \NoNamespaceMessage[]'
             ],
             [
                 [
@@ -198,7 +198,7 @@ class GeneratedPhpdocTest extends TestBase
                     'setRepeatedEnum',
                     'setRepeatedNoNamespaceEnum',
                 ],
-                '@param array<int>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param int[] $var'
             ],
             [
                 [
@@ -208,45 +208,45 @@ class GeneratedPhpdocTest extends TestBase
                     'setRepeatedFixed64',
                     'setRepeatedSfixed64',
                 ],
-                '@param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param int[]|string[] $var'
             ],
             [
                 [
                     'setRepeatedFloat',
                     'setRepeatedDouble',
                 ],
-                '@param array<float>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param float[] $var'
             ],
             [
                 [
                     'setRepeatedBool',
                 ],
-                '@param array<bool>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param bool[] $var'
             ],
             [
                 [
                     'setRepeatedString',
                     'setRepeatedBytes',
                 ],
-                '@param array<string>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param string[] $var'
             ],
             [
                 [
                     'setRepeatedMessage',
                 ],
-                '@param array<\Foo\TestMessage\Sub>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param \Foo\TestMessage\Sub[] $var'
             ],
             [
                 [
                     'setRepeatedRecursive',
                 ],
-                '@param array<\Foo\TestMessage>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param \Foo\TestMessage[] $var'
             ],
             [
                 [
                     'setRepeatedNoNamespaceMessage',
                 ],
-                '@param array<\NoNamespaceMessage>|\Google\Protobuf\Internal\RepeatedField $var'
+                '@param \NoNamespaceMessage[] $var'
             ],
             [
                 [

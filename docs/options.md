@@ -511,3 +511,8 @@ with info about your project (name and website) so we can add an entry for you.
 
     *   Website: https://nebius.ai
     *   Extensions: 1191-1199
+
+1.  userver
+
+    *   Website: https://userver.tech/
+    *   Extensions: 1200

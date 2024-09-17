@@ -170,7 +170,6 @@ proto_library(
     name = "no_package_import_proto",
     testonly = True,
     srcs = ["no_package_import.proto"],
-    deps = ["//devtools/staticanalysis/pipeline/analyzers/proto_best_practices/proto:optouts_proto"],
 )
 
 proto_library(
@@ -183,7 +182,6 @@ proto_library(
     exports = [":no_package_import_proto"],
     deps = [
         ":no_package_import_proto",
-        "//devtools/staticanalysis/pipeline/analyzers/proto_best_practices/proto:optouts_proto",
     ],
 )
 

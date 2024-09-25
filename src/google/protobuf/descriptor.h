@@ -32,6 +32,7 @@
 #define GOOGLE_PROTOBUF_DESCRIPTOR_H__
 
 #include <atomic>
+#include <cstddef>
 #include <cstdint>
 #include <iterator>
 #include <memory>
@@ -65,6 +66,7 @@
 #define PROTOBUF_IGNORE_DEPRECATION_STOP
 #endif
 
+using std::size_t;
 
 namespace google {
 namespace protobuf {

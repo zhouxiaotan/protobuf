@@ -25,6 +25,8 @@
 #include "google/protobuf/descriptor.pb.h"
 #include "google/protobuf/io/printer.h"
 
+using std::size_t;
+
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -67,7 +69,7 @@ void EnumLiteGenerator::Generate(io::Printer* printer) {
   printer->Annotate("classname", descriptor_);
   printer->Indent();
 
-  for (int i = 0; i < canonical_values_.size(); i++) {
+  for (size_t i = 0; i < canonical_values_.size(); i++) {
     absl::flat_hash_map<absl::string_view, std::string> vars;
     vars["name"] = canonical_values_[i]->name();
     vars["number"] = absl::StrCat(canonical_values_[i]->number());
@@ -91,7 +93,7 @@ void EnumLiteGenerator::Generate(io::Printer* printer) {
 
   // -----------------------------------------------------------------
 
-  for (int i = 0; i < aliases_.size(); i++) {
+  for (size_t i = 0; i < aliases_.size(); i++) {
     absl::flat_hash_map<absl::string_view, std::string> vars;
     vars["classname"] = descriptor_->name();
     vars["name"] = aliases_[i].value->name();
@@ -162,7 +164,7 @@ void EnumLiteGenerator::Generate(io::Printer* printer) {
   printer->Indent();
   printer->Indent();
 
-  for (int i = 0; i < canonical_values_.size(); i++) {
+  for (size_t i = 0; i < canonical_values_.size(); i++) {
     printer->Print("case $number$: return $name$;\n", "name",
                    canonical_values_[i]->name(), "number",
                    absl::StrCat(canonical_values_[i]->number()));

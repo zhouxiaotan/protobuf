@@ -29,6 +29,8 @@
 // Must be last.
 #include "google/protobuf/port_def.inc"
 
+using std::size_t;
+
 namespace google {
 namespace protobuf {
 namespace compiler {
@@ -74,15 +76,15 @@ void EnumNonLiteGenerator::Generate(io::Printer* printer) {
 
   bool ordinal_is_index = true;
   std::string index_text = "ordinal()";
-  for (int i = 0; i < canonical_values_.size(); i++) {
-    if (canonical_values_[i]->index() != i) {
+  for (size_t i = 0; i < canonical_values_.size(); i++) {
+    if (static_cast<size_t>(canonical_values_[i]->index()) != i) {
       ordinal_is_index = false;
       index_text = "index";
       break;
     }
   }
 
-  for (int i = 0; i < canonical_values_.size(); i++) {
+  for (size_t i = 0; i < canonical_values_.size(); i++) {
     absl::flat_hash_map<absl::string_view, std::string> vars;
     vars["name"] = canonical_values_[i]->name();
     vars["index"] = absl::StrCat(canonical_values_[i]->index());
@@ -122,7 +124,7 @@ void EnumNonLiteGenerator::Generate(io::Printer* printer) {
   printer->Outdent();
   printer->Print("}\n");
 
-  for (int i = 0; i < aliases_.size(); i++) {
+  for (size_t i = 0; i < aliases_.size(); i++) {
     absl::flat_hash_map<absl::string_view, std::string> vars;
     vars["classname"] = descriptor_->name();
     vars["name"] = aliases_[i].value->name();
@@ -206,7 +208,7 @@ void EnumNonLiteGenerator::Generate(io::Printer* printer) {
   printer->Indent();
   printer->Indent();
 
-  for (int i = 0; i < canonical_values_.size(); i++) {
+  for (size_t i = 0; i < canonical_values_.size(); i++) {
     printer->Print("case $number$: return $name$;\n", "name",
                    canonical_values_[i]->name(), "number",
                    absl::StrCat(canonical_values_[i]->number()));
@@ -380,7 +382,7 @@ void EnumNonLiteGenerator::Generate(io::Printer* printer) {
 }
 
 bool EnumNonLiteGenerator::CanUseEnumValues() {
-  if (canonical_values_.size() != descriptor_->value_count()) {
+  if (canonical_values_.size() != static_cast<size_t>(descriptor_->value_count())) {
     return false;
   }
   for (int i = 0; i < descriptor_->value_count(); i++) {

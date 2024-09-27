@@ -154,11 +154,11 @@ def protobuf_deps():
         )
 
     if not native.existing_rule("rules_kotlin"):
-        # Version 1.9.0 is the lowest available on BCR
+        # Version 1.9.3 is the lowest that works with Bazel 8
         http_archive(
             name = "rules_kotlin",
-            sha256 = "5766f1e599acf551aa56f49dab9ab9108269b03c557496c54acaf41f98e2b8d6",
-            url = "https://github.com/bazelbuild/rules_kotlin/releases/download/v1.9.0/rules_kotlin-v1.9.0.tar.gz",
+            sha256 = "b3eac09c6385e3a79f3c260314c4bfb82c288d3947869b2406b11bf1ef450cc2",
+            url = "https://github.com/bazelbuild/rules_kotlin/releases/download/v1.9.3/rules_kotlin-v1.9.3.tar.gz",
         )
 
     if not native.existing_rule("rules_license"):
